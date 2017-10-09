@@ -59,6 +59,12 @@ Rustfmt 是 Rust 下的代码格式化工具，类似于 gofmt。安装之后（
 
 ![](/images/config-rust-environment/sp20171009_215438.png)
 
+执行：
+
+```bash
+cargo +nightly install rustfmt
+```
+
 首次执行 `cargo install` 会消耗较长时间（特别是网络不好），因为它要连接 GitHub 进行 crates 的索引。此外，下载和编译要一定的时间。是的，它需要下载回来后进行编译。
 
 ## 安装 Racer
@@ -128,7 +134,7 @@ rustup component add rust-analysis --toolchain nightly
 
 ![](/images/config-rust-environment/sp20171009_234956.png)
 
-生命周期不正确也能检测（注意此时文件没有保存）：
+生命周期不正确也能检测（此时文件没有保存）：
 
 ![](/images/config-rust-environment/sp20171009_235453.png)
 
