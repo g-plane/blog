@@ -13,19 +13,19 @@ tags:
 
 我是通过 CLI 执行 `karma init` 来生成配置文件的，虽然在向导提示中 Karma 有询问我使用的是什么测试框架和什么浏览器，但是在生成出来的文件中仅仅是指定了测试框架和浏览器：
 
-[![](http://www.gplane.win/wp-content/uploads/2017/05/sp20170506_214636-150x26.png)](http://www.gplane.win/wp-content/uploads/2017/05/sp20170506_214636.png)
+![](/images/notices-of-using-karma/sp20170506_214636.png)
 
-[![](http://www.gplane.win/wp-content/uploads/2017/05/sp20170506_214642-150x24.png)](http://www.gplane.win/wp-content/uploads/2017/05/sp20170506_214642.png)
+![](/images/notices-of-using-karma/sp20170506_214642.png)
 
 这样是不够的，还需要我们安装相应的插件。以 QUnit 和 Chrome 为例，我们要安装 `karma-qunit` 和 `karma-chrome-launcher`，并在配置文件中的 `plugins` 中添加这些插件：
 
-[![](http://www.gplane.win/wp-content/uploads/2017/05/sp20170506_215056-150x12.png)](http://www.gplane.win/wp-content/uploads/2017/05/sp20170506_215056.png)
+![](/images/notices-of-using-karma/sp20170506_215056.png)
 
 ## 加载 QUnit
 
 如果要在工程目录中通过执行 `karma start` 来开始测试，那么应该在全局环境中安装 Karma，并且在全局环境中安装 QUnit，否则它将提示 `Cannot find module 'qunitjs'` 的错误，如图：
 
-[![](http://www.gplane.win/wp-content/uploads/2017/05/sp20170506_201307-150x43.png)](http://www.gplane.win/wp-content/uploads/2017/05/sp20170506_201307.png)
+![](/images/notices-of-using-karma/sp20170506_201307.png)
 
 * * *
 

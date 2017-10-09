@@ -16,13 +16,17 @@ tags:
 搜索了一下，在 Stack Overflow 找到了解决办法。
 
 原答案给的解决方法是依次执行以下命令：
-<pre class="lang:sh decode:true ">sudo apt-get install python3-dev libffi-dev libssl-dev
+
+```bash
+sudo apt-get install python3-dev libffi-dev libssl-dev
 wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz  
 tar xvf Python-3.6.0.tgz
 cd Python-3.6.0
 ./configure --enable-optimizations  
 make -j8  
-sudo make altinstall</pre>
+sudo make altinstall
+```
+
 由于我已经下载好了 Python 的源码，所以我不需要执行 `apt-get install python3-dev` ，也不需要进行 `wget` 和解压。也就是说，我只是安装了 `libffi-dev` 和 `libssl-dev` ，接着进行编译和安装即可。
 
 整个编译和安装的时候会比较长，需要耐心等待。

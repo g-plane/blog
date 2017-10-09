@@ -24,16 +24,31 @@ tags:
 相对而言，Anime 是主的，Episode 和 Actor 是次的。
 
 在 Episode 和 Actor 模型中定义外键之前，先导入：
-<pre class="lang:python decode:true ">from sqlalchemy import ForeignKey</pre>
+
+```python
+from sqlalchemy import ForeignKey
+```
+
 按照模型的设计，Episode 和 Actor 中都要有 `anime_id` 属性，这个属性在数据表中就是我们所要的外键。因此，这个属性要这样定义：
-<pre class="lang:python decode:true">anime_id = Column(Integer, ForeignKey('animes.anime_id'))</pre>
+
+```python
+anime_id = Column(Integer, ForeignKey('animes.anime_id'))
+```
+
 这样就指明，`episodes` 和 `actors` 表中的 `anime_id` 是外键，并且与 `animes` 表中的 `anime_id` 一栏进行关联。
 
 接下来要在 Anime 模型中指定 episodes 属性和 actors 属性：
-<pre class="lang:python decode:true">actors = relationship("Anime", backref="actors")
-episodes = relationship("Anime", backref="episodes")</pre>
+
+```python
+actors = relationship("Anime", backref="actors")
+episodes = relationship("Anime", backref="episodes")
+```
+
 别忘了要在 Anime 中导入：
-<pre class="lang:python decode:true ">from sqlalchemy.orm import relationship</pre>
+
+```python
+from sqlalchemy.orm import relationship
+```
 这样就完成了多个模型中的一对多关联。
 
 ## 使用相同的基类
@@ -49,10 +64,6 @@ SQLAlchemy 有个跟 Sequelize 中 `upsert()` 方法类似的，就是 `session
 随后我临时把 `actors` 表中 `anime_id` 字段的 NOT NULL 关掉，结果是插入成功了，但是 actors 信息与之前现有的重复了，并且新增的几行中 `anime_id` 的值是空的，而 episodes 那边却没有这样的问题。我猜想可能跟 actors 中 `id` 的 Auto Increment 有关。
 
 这个我上网查过，也看了官方文档，目前还没有找到有效的解决方案。在这里，我只能是使用 `one_or_none()` 方法，这个方法是先从数据库中查询，找到就返回实例，否则返回 None。利用这个方法，我检测返回的结果是否为 None，如果为 None，则添加所有字段的信息，如果是实例，则指定 `anime_id` 和需要更新数据的字段（毕竟不是所有字段都要更新的，actors 就是这样），最后执行 `session.merge()`。
-
-&nbsp;
-
-&nbsp;
 
 这里我找到一个不错的 SQLAlchemy 的简单教程：（虽然是别人写的，但我完全没有要做广告的意思）
 
