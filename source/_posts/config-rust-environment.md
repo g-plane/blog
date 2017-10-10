@@ -69,8 +69,6 @@ cargo +nightly install rustfmt
 
 ## 安装 Racer
 
-RLS 需要 Racer，而安装 Racer 稍微复杂，并且又是个考验网络的时候。
-
 首先安装 nightly 的工具链，由于我这里使用的 `x86_64-pc-windows-gnu`，所以要执行：
 
 ```bash
@@ -83,9 +81,9 @@ rustup toolchain install nightly-x86_64-pc-windows-gnu
 rustup component add rust-src --toolchain nightly
 ```
 
-安装完成之后要添加一个环境变量（略烦）：`RUST_SRC_PATH`。把它的值设置为 `RUSTUP_HOME` 下 `toolchains/(你的 toolchain)/src`。
+安装完成之后要添加一个环境变量（略烦）：`RUST_SRC_PATH`。把它的值设置为 `RUSTUP_HOME` 下 `toolchains/(你的 toolchain)/lib/rustlib/src/rust/src`。
 
-例如我这里 `RUSTUP_HOME` 的值是 `E:\Apps\Rust\rustup`，而我使用的 toolchain 是 `nightly-x86_64-pc-windows-gnu`，因此这个环境变量设置为 `E:\Apps\Rust\rustup\toolchains\nightly-x86_64-pc-windows-gnu\src`。
+例如我这里 `RUSTUP_HOME` 的值是 `E:\Apps\Rust\rustup`，而我使用的 toolchain 是 `nightly-x86_64-pc-windows-gnu`，因此这个环境变量设置为 `E:\Apps\Rust\rustup\toolchains\nightly-x86_64-pc-windows-gnu\lib\rustlib\src\rust\src`。
 
 设置完之后就可以执行：
 
@@ -104,7 +102,7 @@ rustup component add rust-analysis --toolchain nightly
 
 # 安装 VS Code 中的相关扩展
 
-这里推荐安装两个扩展，分别是 `Rust` 和 `Rust(rls)`，直接在 VS Code 中搜索「Rust」就能找到这两个扩展。
+推荐使用「Rust」扩展，直接在 VS Code 中搜索「Rust」就能找到这个扩展。
 
 # 效果
 
