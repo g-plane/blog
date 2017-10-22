@@ -202,10 +202,9 @@ sidebar:
         icon: chrome_reader_mode
         divider: false
     pages:
-        #About:
-            #link: "/about"
-            #icon: person
-            #divider: false
+        友情链接:
+            link: "/friends"
+            icon: people
     article_num:
         use: false
         divider: false
