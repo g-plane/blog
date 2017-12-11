@@ -107,3 +107,7 @@ prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
   theme: 'atom-dark'
   line_number: false
+
+cdn:
+  enable: true
+  base: //hexo-blog-1251929322.file.myqcloud.com
