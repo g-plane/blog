@@ -1,10 +1,9 @@
 ---
 title: 自己做个一键PHP环境包
 id: 57
-categories:
+tags:
   - PHP
 date: 2016-11-19 00:08:08
-tags:
 ---
 
 [ 注意：此文写于18日，但发布于19日 ]

@@ -1,0 +1,77 @@
+# ========== Profile ========== #
+# avatar
+avatar: /avatar/fatpig.png
+# author name
+author: 
+# signature
+signature: Maybe I am stupid.
+# SNS
+social:
+  email: 'g-plane@hotmail.com'
+  github: https://github.com/g-plane
+  # weibo:
+  zhihu: https://www.zhihu.com/people/gplane
+  # facebook:
+  twitter: https://twitter.com/g3plane
+  # instagram:
+  # stack-overflow:
+  # linkedin:
+  # others:
+  # rss: /atom.xml
+# friends
+friends:
+  哈陆lu: https://halu.lu/
+about:
+  enable: true
+  image: '/intro/about-page.jpg'
+
+# ========== Site ========== #
+# title of the site
+SEO_title: Pig Fang
+# main title
+main_title: Pig Fang
+# subtitle
+subtitle: Coders are artisans, code is artwork and coding is an art.
+# site haeder image
+site_header_image: '/intro/intro-desktop.jpg'
+# post haeder image
+post_header_image: '/intro/post-bg.jpg'
+# 404 image
+_404_image: '/intro/404.jpg'
+
+# ========== Comment ========== #
+# Fill in the field to enable the corresponding comment plugin
+# If you want to add other comment plugin, edit in "custom.ejs"
+comment:
+  # livere  site: https://livere.com/
+  livere_uid:
+  # disqus  site: https://disqus.com/
+  disqus_shortname: gplane-blog
+  # changyan  site: http://changyan.kuaizhan.com/
+  changyan_appid:
+  changyan_conf:
+  # gitment  site: https://github.com/imsun/gitment
+  gitment_owner:
+  gitment_repo:
+  gitment_client_id:
+  gitment_client_secret:
+  # youyan  site: http://www.uyan.cc/
+  youyan_uid:
+
+# ========== Analytics ========== #
+# Busuanzi pv Analytics
+busuanzi: true
+# Baidu analytics
+baidu_analytics:
+# Google analytics
+google_analytics:
+# CNZZ analytics
+CNZZ_analytics:
+
+# ========== Others ========== #
+# favicon
+favicon: /avatar/fatpig.png
+# truncate length (the default is 300)
+truncate_length:
+# enable toc
+toc: true

@@ -1,10 +1,9 @@
 ---
 title: 从 Eclipse 转到 IntelliJ IDEA
 id: 44
-categories:
+tags:
   - Java
 date: 2016-10-23 13:25:31
-tags:
 thumbnail: /images/from-eclipse-to-intellij-idea/sp20161022_232053.png
 ---
 

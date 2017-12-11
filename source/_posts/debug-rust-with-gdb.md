@@ -2,7 +2,6 @@
 title: 使用 GDB 调试 Rust 程序
 date: 2017-10-12 19:23:55
 tags:
-categories:
   - Rust
 thumbnail: /images/debug-rust-with-gdb/sp20171012_200216.png
 ---

@@ -1,10 +1,10 @@
 ---
 title: 解决 Travis CI 中 Chrome 找不到的办法
 id: 164
-categories:
-  - 前端
-date: 2017-05-07 11:25:01
 tags:
+  - 前端
+  - JavaScript
+date: 2017-05-07 11:25:01
 ---
 
 我决定在我的 `blessing-trans` 项目中使用 Karma（是的，我要抛弃 `node-qunit-phantomjs` 了），当我在我本地执行 `karma start` 的时候，是完全没有问题的，能够自动启动 Chrome。但是当我推送到 Github 并让 CI 进行构建的时候，测试失败，提示是找不到 Chrome。

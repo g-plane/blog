@@ -1,10 +1,9 @@
 ---
 title: 使用 SQLAlchemy 模型关联要注意的事项
 id: 146
-categories:
+tags:
   - Python
 date: 2017-03-08 16:05:03
-tags:
 ---
 
 这两天在弄把B站所有番剧信息抓取下来的程序，并存入 PostgreSQL。因为懒得写 SQL 语句和处理游标，我打算使用 ORM，自然就选择了 SQLAlchemy。SQLAlchemy 的模型关联比较“啰嗦”，不如其它 ORM 框架那么简洁。

@@ -2,7 +2,6 @@
 title: 配置 Rust 开发环境
 date: 2017-10-09 21:18:18
 tags:
-categories:
   - Rust
 thumbnail: /images/config-rust-environment/sp20171009_234019.png
 ---

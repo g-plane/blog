@@ -1,10 +1,9 @@
 ---
 title: 让 JDialog 返回数据
 id: 35
-categories:
+tags:
   - Java
 date: 2016-08-09 09:29:24
-tags:
 ---
 
 补充：上次 swing 的怪异问题，我放弃了。后来在Eclipse里安装了一个 WindowBuilder 的 WYSIWYG 插件，做界面的效率高得多了（话说最新的 WindowBuilder 只支持 Eclipse 的4.5版本，我在4.6中安装也能正常运行~）

@@ -1,9 +1,8 @@
 ---
 title: 博客程序改用 Hexo
 date: 2017-10-09 16:27:54
-categories:
-  - My Blog
 tags:
+  - My Blog
 ---
 
 今天花了一天的时间完成了从 WordPress 到 Hexo 迁移。之前的博客一直是用 WordPress 并使用 OpenShift 的免费空间。
@@ -15,5 +14,7 @@ tags:
 因为国庆放假回家，之前备份的 WordPress 数据不在手上，而且家里的电脑不知道为什么没法运行 Hexo Server，因此自然要等到放假回来才做迁移工作。
 
 目前使用的 Hexo 主题是 Material（没错我是个 Material 粉）。博客首页的 Daily Picture 截图来自《夏目友人帳》第三季第四集，右侧的 Avatar 则是以前从网上搜集的（侵删），整个背景也是从以前搜集的壁纸中取的（侵删）。
+
+2017/12/11 更新：将博客主题更换为 [Archer](https://github.com/fi3ework/hexo-theme-archer)，并在此主题的基础上作一些修改。
 
 End.

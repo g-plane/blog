@@ -1,10 +1,10 @@
 ---
 title: 使用 Karma 的一些小坑
 id: 154
-categories:
-  - 前端
-date: 2017-05-06 22:49:19
 tags:
+  - 前端
+  - JavaScript
+date: 2017-05-06 22:49:19
 ---
 
 周末打算用 Karma 来给 [blessing-trans](https://github.com/g-plane/blessing-trans)（一个我用来练习 TypeScript 的项目，欢迎 star）进行测试。之前用的是 QUnit 和 node-qunit-phantomjs 来测试。但我的代码中使用了 HTML5 API 中的 `localStorage` 时，似乎 phantomjs 不支持，然后想试试用 Karma，因此遇到了几个坑，特此记录。

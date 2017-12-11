@@ -3,10 +3,9 @@ title: >-
   使用 pip 命令安装 Python 库时提示“Can't connect to HTTPS URL because the SSL module is
   not available”的解决办法
 id: 168
-categories:
+tags:
   - Python
 date: 2017-05-31 12:29:03
-tags:
 ---
 
 昨天安装了 Linux Deepin 15.4，然后从 Python 官网下载了 Python 3.6.1 的源码，编译和安装没什么问题。但是在我安装好之后，执行 `pip3 install` 的时候，pip 提示我：
