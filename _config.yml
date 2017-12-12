@@ -108,6 +108,15 @@ prism_plugin:
   theme: 'atom-dark'
   line_number: false
 
+html_minifier:
+  exclude:
+  minifyCSS: true
+  minifyJS: true
+  removeAttributeQuotes: true
+  removeComments: true
+  removeEmptyAttributes: true
+  removeRedundantAttributes: true
+
 cdn:
   lib:
     webfontloader: '//cdn.bootcss.com/webfont/1.6.28/webfontloader.js'
