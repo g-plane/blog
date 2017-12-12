@@ -16,7 +16,6 @@
     "hexo-generator-json-content": "^3.0.1",
     "hexo-generator-search": "^2.1.1",
     "hexo-generator-tag": "^0.2.0",
-    "hexo-html-minifier": "^0.0.2",
     "hexo-migrator-wordpress": "^0.1.2",
     "hexo-prism-plugin": "^2.2.0",
     "hexo-renderer-ejs": "^0.3.0",

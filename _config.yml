@@ -108,7 +108,22 @@ prism_plugin:
   theme: 'atom-dark'
   line_number: false
 
+all_minifier: true
+
+js_concator:
+  enable: false
+
+css_minifier:
+  enable: false
+
+js_minifier:
+  enable: false
+
+image_minifier:
+  enable: false
+
 html_minifier:
+  enable: true
   exclude:
   minifyCSS: true
   minifyJS: true
