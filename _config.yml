@@ -111,3 +111,5 @@ prism_plugin:
 cdn:
   enable: true
   base: //hexo-blog-1251929322.file.myqcloud.com
+  exclude:
+    - '/images'
