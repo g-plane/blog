@@ -10,13 +10,10 @@
     </title>
     <link rel="icon" href="<%- theme.favicon %>">
     <!-- TODO: 在font-face加载完毕后改变字体  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <script src="<%- config.cdn.lib.webfontloader %>"></script>
     <!-- 提前加载place holder  -->
     <style type="text/css">
-        @font-face {
-            font-family: 'Oswald-Regular';
-            src: url(<%- url_for('/font/Oswald-Regular.ttf') %>);
-        }
+        @import url(http://fonts.googleapis.com/css?family=Oswald);
     </style>
     <style type="text/css">
         .site-intro-placeholder {
@@ -41,7 +38,7 @@
     }
 </style>
     <link rel="stylesheet" href = <%- url_for("") + "css/style.css?v=20171020" %> />
-    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="<%- config.cdn.lib.jquery %>" defer></script>
     <% let jsURL = url_for('/scripts/main.js'); %>
     <script src="<%- jsURL %>" defer></script>
     <!-- 百度统计  -->

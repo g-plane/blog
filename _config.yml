@@ -18,7 +18,7 @@ search:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://blog.gplane.win
 root: /
-permalink: :title/
+permalink: p/:title/
 permalink_defaults:
 
 # Directory
@@ -109,6 +109,9 @@ prism_plugin:
   line_number: false
 
 cdn:
-  enable: true
-  base: //hexo-blog-1251929322.file.myqcloud.com
-  exclude: images
+  lib:
+    webfontloader: '//cdn.bootcss.com/webfont/1.6.28/webfontloader.js'
+    jquery: '//cdn.bootcss.com/jquery/3.2.1/jquery.min.js'
+  assets:
+    enable: true
+    path: '//hexo-blog-1251929322.file.myqcloud.com'
