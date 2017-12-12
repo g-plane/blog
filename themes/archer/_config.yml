@@ -70,7 +70,7 @@ CNZZ_analytics:
 
 # ========== Others ========== #
 # favicon
-favicon: /avatar/fatpig.png
+favicon: '/avatar/fatpig.png'
 # truncate length (the default is 300)
 truncate_length:
 # enable toc
