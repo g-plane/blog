@@ -6,14 +6,14 @@
     <ul class="post-pager">
         <% if (page.prev){ %>
             <li class="previous">
-                <a href= "<%- url_for(page.prev.path) %>" title= <%- page.prev.title %> >
+                <a href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>" >
                     <span>PREV</span>
                 </a>
             </li>
         <% } %>
         <% if (page.next){ %>
             <li class="next">
-                <a href= "<%- url_for(page.next.path) %>" title= <%- page.next.title %> >
+                <a href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>" >
                     <span>NEXT</span>
                 </a>
             </li>

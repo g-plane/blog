@@ -108,8 +108,6 @@ prism_plugin:
   theme: 'atom-dark'
   line_number: false
 
-all_minifier: true
-
 js_concator:
   enable: false
 
@@ -120,7 +118,10 @@ js_minifier:
   enable: false
 
 image_minifier:
-  enable: false
+  enable: true
+  pngquant: true
+  exclude:
+    - jpg
 
 html_minifier:
   enable: true
@@ -131,6 +132,8 @@ html_minifier:
   removeComments: true
   removeEmptyAttributes: true
   removeRedundantAttributes: true
+  collapseBooleanAttributes: true
+  removeScriptTypeAttributes: true
 
 cdn:
   lib:

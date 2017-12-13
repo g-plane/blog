@@ -1,7 +1,7 @@
 ---
 title: >-
-  使用 pip 命令安装 Python 库时提示“Can't connect to HTTPS URL because the SSL module is
-  not available”的解决办法
+  使用 pip 命令安装 Python 库时提示「Can't connect to HTTPS URL because the SSL module is
+  not available」的解决办法
 id: 168
 tags:
   - Python
