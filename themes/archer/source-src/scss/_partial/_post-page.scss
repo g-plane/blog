@@ -267,3 +267,18 @@
 .toc-hide {
     display: none;
 }
+
+.footer-license {
+    border: 1px dashed #e0e0e0;
+    background-color: #fafafa;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-family: inherit;
+    color: #23394d;
+    font-size: smaller;
+
+    a {
+        color: #3194ce;
+    }
+}
