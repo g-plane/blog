@@ -20,6 +20,7 @@ social:
   # rss: /atom.xml
 # friends
 friends:
+  DreamCity: https://www.littleqiu.net/
   哈陆lu: https://halu.lu/
 about:
   enable: true
