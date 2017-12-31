@@ -11,6 +11,13 @@
         <%- partial('base-social') %>
     </div>
     <% } %>
+    <% if(theme.about.enable) { %>
+        <div class="about-me">
+            <div>
+                <a href = "<%- url_for("/about") %>" >ABOUT ME</a>
+            </div>
+        </div>
+    <% } %>
     <% if(theme.friends) { %>
         <div class="friends">
             <div>FRIENDS</div>
@@ -19,13 +26,6 @@
                     <a href= <%- theme.friends[name] %> target="_black"><%- name %></a>
                 </div>
             <% } %>
-        </div>
-    <% } %>
-    <% if(theme.about.enable) { %>
-        <div class="about-me">
-            <div>
-                <a href = "<%- url_for("/about") %>" >ABOUT ME</a>
-            </div>
         </div>
     <% } %>
 </div>
