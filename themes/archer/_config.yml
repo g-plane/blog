@@ -26,7 +26,6 @@ friends:
   'NciYuan! Blog': https://blog.nciyuan.net/
 about:
   enable: true
-  image: '/intro/about-page.jpg'
 
 # ========== Site ========== #
 # title of the site
