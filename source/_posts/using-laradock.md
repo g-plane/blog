@@ -55,7 +55,9 @@ APPLICATION=../app/
 
 其它的配置项不难理解，自己按需设置就行。
 
-# 启用 MySQL
+# 使用 MySQL
+
+## 开启 MySQL
 
 在我这里直接执行 `sudo docker-compose up -d mysql` 是会报错的：
 
@@ -70,5 +72,19 @@ ERROR: Service 'mysql' failed to build: Please provide a source image with `from
 首先 `sudo apt-get remove docker.io` 来移除旧的 Docker，然后按照 Docker 官方的指导去安装最新的 Docker 即可。
 
 问题解决。
+
+## 数据库连接
+
+首先可以在 Laradock 中的 .env 文件里配置用户名和密码，以及数据库。然后在 Laravel 的 .env 里做同样的设置。但是在 Laravel 的 `DB_HOST` 这一项，要填写 Laradock 中数据库的容器名，默认 MySQL 服务就是 `mysql`，也就是将Laravel 的 `DB_HOST` 这一项设为 `mysql`。
+
+## 运行数据库迁移
+
+执行 `php artisan migrate` 不能在宿主机的终端中执行。正确的做法是首先在 Laradock 目录下打开终端，执行：
+
+```shell
+docker-compose exec php-fpm bash
+```
+
+这会进入 php-fpm 容器中的 bash，然后在容器中的 bash 执行数据库迁移。
 
 以上。
