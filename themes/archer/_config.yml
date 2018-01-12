@@ -17,7 +17,7 @@ social:
   # stack-overflow:
   # linkedin:
   # others:
-  # rss: /atom.xml
+  rss: /rss2.xml
 # friends
 friends:
   DreamCity: https://www.littleqiu.net/
