@@ -5,8 +5,5 @@ cache: yarn
 
 script:
   - yarn run deploy
-
-after_success:
   - chmod +x ./deploy.sh
   - ./deploy.sh
-
