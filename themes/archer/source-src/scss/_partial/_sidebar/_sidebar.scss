@@ -27,15 +27,14 @@
     height: 8rem;
     justify-content: space-between;
     align-items: center;
-    border-top: $header-border-top-width solid #fff;
     background-color: #222;
     &::after {
         content: '';
         position: absolute;
-        height: calc(50% - 2px);
-        width: 2px;
-        top: 0;
-        left: calc(100% - 2px);
+        height: 2px;
+        width: 50%;
+        top: 50%;
+        left: 0;
         background-color: $feature-color;
         transform: translate3d(0, 0, 0);
         transition: all 0.2s ease-in-out .0s;
@@ -45,7 +44,7 @@
 // sidebar category
 .sidebar-category {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     font-family: $feature-font-family;
     flex-grow: 1;
@@ -84,8 +83,7 @@
 
 .sidebar-header-show-tags {
     &::after {
-        height: calc(50% - 2px);
-        transform: translate3d(0, calc(100% + 2px), 0);
+        transform: translate3d(100%, 0, 0);
     }
 }
 
