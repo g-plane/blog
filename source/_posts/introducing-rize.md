@@ -49,7 +49,7 @@ rize
   .end()
 ```
 
-No `async/await ` any more. (But still asynchronously in interal operations)
+No `async/await ` any more. (But still asynchronously in internal operations)
 
 # What the library name "Rize" means?
 
