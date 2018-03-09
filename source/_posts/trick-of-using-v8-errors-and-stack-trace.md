@@ -108,7 +108,7 @@ error.stack = stack.join('\n')
 
 [![屏幕快照 2018-03-09 下午5.55.18.png](https://i.loli.net/2018/03/09/5aa25ad248874.png)](https://i.loli.net/2018/03/09/5aa25ad248874.png)
 
-配合 Jest 就能更好的定位问题所在之处：
+配合 Jest 就能更好地定位问题所在之处：
 
 [![屏幕快照 2018-03-09 下午5.56.06.png](https://i.loli.net/2018/03/09/5aa25ad246b55.png)](https://i.loli.net/2018/03/09/5aa25ad246b55.png)
 
