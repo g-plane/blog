@@ -38,7 +38,7 @@ export default {
     margin-top 6%
     text-align center
     font-size 37px
-    font-family Raleway
+    font-family 'Roboto Slab', 'Microsoft Yahei', 'Ubunto Mono'
     color #373D42
     cursor default
   
