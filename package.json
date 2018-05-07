@@ -1,0 +1,36 @@
+{
+  "name": "blog",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt generate",
+    "lint": "eslint . -f=beauty"
+  },
+  "devDependencies": {
+    "@nuxtjs/feed": "^0.1.1",
+    "@nuxtjs/markdownit": "^1.2.1",
+    "@types/chokidar": "^1.7.5",
+    "@types/ejs": "^2.5.1",
+    "@types/node": "^10.0.4",
+    "chokidar": "^2.0.3",
+    "ejs": "^2.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-gplane": "^3.0.0-beta.0",
+    "eslint-formatter-beauty": "^3.0.0-beta.0",
+    "front-matter": "^2.3.0",
+    "lru-cache": "^4.1.2",
+    "markdown-it-attrs": "^1.2.1",
+    "nuxt": "^1.4.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  },
+  "dependencies": {
+    "feather-icons": "^4.7.0",
+    "highlight.js": "^9.12.0",
+    "markdown-it": "^8.4.1",
+    "markdown-it-anchor": "^4.0.0",
+    "markdown-it-cjk-breaks": "^1.1.0",
+    "markdown-it-container": "^2.0.0"
+  }
+}
