@@ -1,6 +1,6 @@
 const fonts = [
-  'Raleway',
-  'Roboto Mono'
+  'Roboto Mono',
+  'Roboto Slab'
 ].map(name => name.replace(/\s/g, '+')).join('|')
 
 module.exports = {
