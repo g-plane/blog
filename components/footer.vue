@@ -75,6 +75,7 @@ footer
   align-items center
 
 .license
+  font-family 'Roboto Slab'
   margin-top 15px
   margin-bottom 10px
   display flex
