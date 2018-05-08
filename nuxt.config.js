@@ -8,8 +8,6 @@ module.exports = {
     '@/assets/common.styl'
   ],
   modules: [
-    '@nuxtjs/markdownit',
-    '@nuxtjs/feed',
     '~/modules/prerender',
   ],
   vendor: [
@@ -31,14 +29,5 @@ module.exports = {
         href: 'https://hexo-blog-1251929322.file.myqcloud.com/avatar/fatpig.png'
       }
     ]
-  },
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,
-    use: [
-      'markdown-it-attrs',
-      'markdown-it-cjk-breaks',
-    ]
-  },
+  }
 }

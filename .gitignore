@@ -4,4 +4,5 @@ node_modules/
 yarn-error.log
 .DS_Store
 static/posts.json
+static/rss2.xml
 pages/p/*.vue

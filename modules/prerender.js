@@ -10,6 +10,7 @@ const MarkdownIt = require('markdown-it')
 const MarkdownItAnchor = require('markdown-it-anchor')
 const MarkdownItAttrs = require('markdown-it-attrs')
 const MarkdownItCJKBreaks = require('markdown-it-cjk-breaks')
+const Feed = require('feed')
 
 const SOURCE_DIR = './source/posts'
 const DEST_DIR = './pages/p'
@@ -100,6 +101,32 @@ function generatePostsData(docs) {
   writeFile('./static/posts.json', JSON.stringify(data))
 }
 
+async function generateRss(docs) {
+  const feed = new Feed({
+    title: 'Pig Fang',
+    description: 'Coders are artisans, code is artwork and coding is an art.',
+    id: 'https://blog.gplane.win/',
+    link: 'https://blog.gplane.win/',
+    favicon: 'https://hexo-blog-1251929322.file.myqcloud.com/avatar/fatpig.png',
+    generator: 'Nuxt.js',
+  })
+  docs.forEach(doc => {
+    feed.addItem({
+      title: doc.matter.attributes.title,
+      id: doc.name,
+      link: `https://blog.gplane.win/p/${doc.name}/`,
+      author: [{
+        name: 'Pig Fang',
+        email: 'g-plane@hotmail.com',
+        link: 'https://gplane.win/'
+      }],
+      content: md.render(doc.matter.body),
+      date: doc.matter.attributes.date
+    })
+  })
+  await writeFile('./static/rss2.xml', feed.rss2())
+}
+
 module.exports = function () {
   this.nuxt.hook('ready', async () => {
     const docs = await Promise.all(fs.readdirSync(SOURCE_DIR)
@@ -115,5 +142,6 @@ module.exports = function () {
       a.matter.attributes.date.valueOf())
     Promise.all(docs.map(generateFile))
     generatePostsData(docs)
+    generateRss(docs)
   })
 }
