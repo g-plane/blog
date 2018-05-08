@@ -11,8 +11,17 @@ const MarkdownItAnchor = require('markdown-it-anchor')
 const MarkdownItAttrs = require('markdown-it-attrs')
 const MarkdownItCJKBreaks = require('markdown-it-cjk-breaks')
 
-const SOURCE_DIR = './pages/posts'
+const SOURCE_DIR = './source/posts'
 const DEST_DIR = './pages/p'
+
+const readFile = promisify(fs.readFile)
+const writeFile = promisify(fs.writeFile)
+
+try {
+  fs.statSync(DEST_DIR)
+} catch (error) {
+  fs.mkdirSync(DEST_DIR)
+}
 
 ejs.cache = lru(100)
 const template = fs.readFileSync('./scaffolds/post.vue', 'utf-8')
@@ -50,10 +59,7 @@ const md = new MarkdownIt('default', {
   .use(MarkdownItAttrs)
   .use(MarkdownItCJKBreaks)
 
-async function generateFile(name, fullPath) {
-  const filePath = fullPath ? name : `${SOURCE_DIR}/${name}`
-  const file = await promisify(fs.readFile)(filePath, 'utf-8')
-  const matter = fm(file)
+async function generateFile({ name, matter }) {
   const vueFile = ejs.render(template, {
     name,
     title: matter.attributes.title,
@@ -68,23 +74,46 @@ async function generateFile(name, fullPath) {
     tags: matter.attributes.tags,
     content: md.render(matter.body)
   })
-  await promisify(fs.writeFile)(
-    `${DEST_DIR}/${path.basename(name, '.md')}.vue`,
-    vueFile
-  )
+  await writeFile(`${DEST_DIR}/${name}.vue`, vueFile)
 }
 
 chokidar.watch(`${SOURCE_DIR}/*.md`).on('all', async (event, filePath) => {
   if (event === 'add' || event === 'change') {
-    await generateFile(filePath, true)
+    const content = await readFile(filePath, 'utf-8')
+    await generateFile({
+      name: path.basename(filePath, '.md'),
+      matter: fm(content)
+    })
   }
 })
 
+function generatePostsData(docs) {
+  const data = docs.map(({ name, matter }) => ({
+    name,
+    title: matter.attributes.title,
+    date: matter.attributes.date.toLocaleDateString('zh-Hans-CN', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    })
+  }))
+  writeFile('./static/posts.json', JSON.stringify(data))
+}
+
 module.exports = function () {
   this.nuxt.hook('ready', async () => {
-    const operations = fs.readdirSync(SOURCE_DIR)
+    const docs = await Promise.all(fs.readdirSync(SOURCE_DIR)
       .filter(name => name.endsWith('.md'))
-      .map(generateFile)
-    await Promise.all(operations)
+      .map(async name => {
+        const content = await readFile(path.join(SOURCE_DIR, name), 'utf-8')
+        return {
+          name: path.basename(name, '.md'),
+          matter: fm(content)
+        }
+      }))
+    docs.sort((a, b) => b.matter.attributes.date.valueOf() -
+      a.matter.attributes.date.valueOf())
+    Promise.all(docs.map(generateFile))
+    generatePostsData(docs)
   })
 }
