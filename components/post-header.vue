@@ -16,7 +16,12 @@ export default {
     }
   },
   beforeMount() {
-    this.title = document.title
+    if (!window.$title) {
+      Object.defineProperty(window, '$title', {
+        get: () => this.title,
+        set: value => this.title = value
+      })
+    }
   },
   mounted() {
     function scrollPostion() {
@@ -52,6 +57,8 @@ export default {
         .color = position > 0.5 ? '#fff' : '#000'
     }
     window.addEventListener('scroll', changeColor)
+
+    this.title = window.$title
   }
 }
 </script>

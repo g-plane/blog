@@ -19,8 +19,11 @@ export default {
   },
   head() {
     return {
-      title: '<%= title %>'
+      title: '<%= title %> - Pig Fang'
     }
+  },
+  beforeMount() {
+    window.$title = '<%= title %>'
   }
 }
 </script>
