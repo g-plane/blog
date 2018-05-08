@@ -61,7 +61,7 @@ export default {
   font-family 'Roboto Slab', 'Microsoft Yahei', 'Ubunto Mono'
   
   .blog-name
-    margin-top 6%
+    margin-top 5%
     text-align center
     font-size 37px
     color #373D42
