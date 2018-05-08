@@ -8,6 +8,7 @@ module.exports = {
     '@nuxtjs/markdownit',
     '@nuxtjs/feed',
     '~/modules/prerender',
+    '~/modules/index-data',
   ],
   vendor: [
     'feather-icons',

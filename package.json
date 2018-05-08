@@ -31,6 +31,8 @@
     "markdown-it": "^8.4.1",
     "markdown-it-anchor": "^4.0.0",
     "markdown-it-cjk-breaks": "^1.1.0",
-    "markdown-it-container": "^2.0.0"
+    "markdown-it-container": "^2.0.0",
+    "vue": "^2.5.16",
+    "vue-paginate": "^3.6.0"
   }
 }
