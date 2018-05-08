@@ -35,11 +35,11 @@ date: 2016-11-19 00:08:08
 
 首先像这样把 Nginx 和 PHP 解压好。
 
-![](/images/make-onekey-php-package/sp20161118_152941.png)
+[![sp20161118_152941.png](https://i.loli.net/2018/05/08/5af1c2334ee2b.png)](https://i.loli.net/2018/05/08/5af1c2334ee2b.png)
 
 然后打开 nginx\conf\nginx.conf，把 PHP 的那段取消注释：
 
-![](/images/make-onekey-php-package/sp20161118_153757.png)
+[![sp20161118_153757.png](https://i.loli.net/2018/05/08/5af1c233bcbb3.png)](https://i.loli.net/2018/05/08/5af1c233bcbb3.png)
 
 这里是我已经配置好的，那么实际上要把第69行的 `/scripts$fastcgi_script_name` 改为`$document_root$fastcgi_script_name`。
 
@@ -49,7 +49,7 @@ date: 2016-11-19 00:08:08
 
 所以我很自然地把 root 的值写成 `../www`（如图）
 
-![](/images/make-onekey-php-package/sp20161118_154855.png)
+[![sp20161118_154855.png](https://i.loli.net/2018/05/08/5af1c23407fd4.png)](https://i.loli.net/2018/05/08/5af1c23407fd4.png)
 
 然后下面 PHP 那段也是如此。
 
@@ -57,7 +57,7 @@ date: 2016-11-19 00:08:08
 
 后来上网查了下，原来是两处的相对路径表达方式是不一样的，PHP 那里的 root 要写成 `./www`（这是上层目录？）
 
-![](/images/make-onekey-php-package/sp20161118_155340.png)
+[![sp20161118_155340.png](https://i.loli.net/2018/05/08/5af1c234153f0.png)](https://i.loli.net/2018/05/08/5af1c234153f0.png)
 
 `location` 那里最好加个 `index.php` 吧。这么一改，OK 了。
 
@@ -65,11 +65,11 @@ date: 2016-11-19 00:08:08
 
 首先要把第760行的 `cgi.fix_pathinfo=1` 取消注释。
 
-![](/images/make-onekey-php-package/sp20161118_155829.png)
+[![sp20161118_155829.png](https://i.loli.net/2018/05/08/5af1c2344f564.png)](https://i.loli.net/2018/05/08/5af1c2344f564.png)
 
 然后把指向扩展目录的那行（第723行）取消注释。
 
-![](/images/make-onekey-php-package/sp20161118_160139.png)
+[![sp20161118_160139.png](https://i.loli.net/2018/05/08/5af1c28bba771.png)](https://i.loli.net/2018/05/08/5af1c28bba771.png)
 
 接着从877行开始，通过取消注释相应的行来启用相关扩展，注意扩展的依赖性，例如 `php_exif.dll` 依赖 `php_mbstring.dll`。
 
@@ -83,7 +83,7 @@ date: 2016-11-19 00:08:08
 
 在 CMD 里运行 httpd，报错：
 
-![](/images/make-onekey-php-package/sp20161118_162951.png)
+[![sp20161118_162951.png](https://i.loli.net/2018/05/08/5af1c28a9995d.png)](https://i.loli.net/2018/05/08/5af1c28a9995d.png)
 
 还是要上网搜索——大概是要指定 Apache 所在目录的路径，可我不想写绝对路径啊！
 
@@ -93,15 +93,15 @@ StackOverflow 中说把 `ServerRoot` 改成 `../`，取代原来的指向 `SRVRO
 
 于是我摸索了一番，发现如果我把 `SRVROOT` 的值改成以“/”开头，那么它会以当前所的在盘符为开头计算路径。
 
-![](/images/make-onekey-php-package/sp20161118_181205.png)
+[![sp20161118_181205.png](https://i.loli.net/2018/05/08/5af1c28dcc167.png)](https://i.loli.net/2018/05/08/5af1c28dcc167.png)
 
 如果我以一个小数点开头，它会以 Apache 所在目录（不是 httpd.exe 所在的 bin 目录）为开始计算路径。
 
-![](/images/make-onekey-php-package/sp20161118_181443.png)
+[![sp20161118_181443.png](https://i.loli.net/2018/05/08/5af1c28d75aa6.png)](https://i.loli.net/2018/05/08/5af1c28d75aa6.png)
 
 如果以两个小数点开头，就没问题了。
 
-![](/images/make-onekey-php-package/sp20161118_181753.png)
+[![sp20161118_181753.png](https://i.loli.net/2018/05/08/5af1c28db215d.png)](https://i.loli.net/2018/05/08/5af1c28db215d.png)
 
 那么现在算是完成了 Apache 的配置，但还要让它与 PHP 关联起来。
 
@@ -111,7 +111,7 @@ StackOverflow 中说把 `ServerRoot` 改成 `../`，取代原来的指向 `SRVRO
 
 也是采用类似的方法测试：
 
-![](/images/make-onekey-php-package/sp20161118_232412.png)
+[![sp20161118_232412.png](https://i.loli.net/2018/05/08/5af1c2e72d925.png)](https://i.loli.net/2018/05/08/5af1c2e72d925.png)
 
 多向上了一层，然而修改后还是不行！
 
@@ -137,7 +137,7 @@ StackOverflow 中说把 `ServerRoot` 改成 `../`，取代原来的指向 `SRVRO
 
 把 httpd.conf 修改如下 ：
 
-![](/images/make-onekey-php-package/sp20161119_000023.png)
+[![sp20161119_000023.png](https://i.loli.net/2018/05/08/5af1c2e639e64.png)](https://i.loli.net/2018/05/08/5af1c2e639e64.png)
 
 这里使用 `SRVROOT` 常量是没有问题的。不过这要在修改 PHP 版本时，对应地修改 httpd.conf，要注意 Apache 和 PHP 要么同时用32位，要么同时用64位。
 
@@ -153,11 +153,11 @@ StackOverflow 中说把 `ServerRoot` 改成 `../`，取代原来的指向 `SRVRO
 
 还是用刚刚探索 Apache 的那种方法，结果如下 ：
 
-![](/images/make-onekey-php-package/sp20161118_201008.png)
+[![sp20161118_201008.png](https://i.loli.net/2018/05/08/5af1c2e6d5eca.png)](https://i.loli.net/2018/05/08/5af1c2e6d5eca.png)
 
 接下来就很简单了：
 
-![](/images/make-onekey-php-package/sp20161118_201138.png)
+[![sp20161118_201138.png](https://i.loli.net/2018/05/08/5af1c2e6df9b8.png)](https://i.loli.net/2018/05/08/5af1c2e6df9b8.png)
 
 不过这样的 MariaDB 还是很大。跟 UPUPW 对比一下，原来是它把 bin 目录下除 exe 文件以外的文件删去。
 

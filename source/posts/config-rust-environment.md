@@ -3,7 +3,6 @@ title: 配置 Rust 开发环境
 date: 2017-10-09 21:18:18
 tags:
   - Rust
-thumbnail: /images/config-rust-environment/sp20171009_234019.png
 ---
 
 # 前言
@@ -29,13 +28,13 @@ thumbnail: /images/config-rust-environment/sp20171009_234019.png
 
 rustup 在 Windows 环境下会优先使用 MSVC 作 linker，也就是 target 为 `(arch)-pc-windows-msvc`，然而我没有 Visual C++ Build Tools（因为它太大了，而且装在C盘）。因此执行 rustup-init.exe 会看到这样的提示：（已经有 MSVC 编译器的不会有这样的提示）
 
-![](/images/config-rust-environment/sp20171009_213420.png)
+[![sp20171009_213420.png](https://i.loli.net/2018/05/08/5af1c0c7f288c.png)](https://i.loli.net/2018/05/08/5af1c0c7f288c.png)
 
 没关系的，按 Y 即可。
 
 但是即使 rustup-init 已经知道你没有 MSVC 编译器，在接下来的下面它仍然默认使用 MSVC：
 
-![](/images/config-rust-environment/sp20171009_213845.png)
+[![sp20171009_213845.png](https://i.loli.net/2018/05/08/5af1c0c81cdd3.png)](https://i.loli.net/2018/05/08/5af1c0c81cdd3.png)
 
 所以这里要选择2，在自定义安装选项中，把 host 改为 `(arch)-pc-windows-gnu`。注意电脑上要先安装 MinGW，推荐安装 MSYS2。
 
@@ -56,7 +55,7 @@ cargo --version
 
 Rustfmt 是 Rust 下的代码格式化工具，类似于 gofmt。安装之后（并配置 VS Code 下的扩展）可以像在其它语言下的那样进行格式化：
 
-![](/images/config-rust-environment/sp20171009_215438.png)
+[![sp20171009_215438.png](https://i.loli.net/2018/05/08/5af1c0c39486a.png)](https://i.loli.net/2018/05/08/5af1c0c39486a.png)
 
 执行：
 
@@ -107,7 +106,7 @@ rustup component add rust-analysis --toolchain nightly
 
 ## Snippets
 
-![](/images/config-rust-environment/sp20171009_234019.png)
+[![sp20171009_234019.png](https://i.loli.net/2018/05/08/5af1c0c3a219d.png)](https://i.loli.net/2018/05/08/5af1c0c3a219d.png)
 
 ## 代码格式化
 
@@ -115,29 +114,29 @@ rustup component add rust-analysis --toolchain nightly
 
 ## 重构
 
-![](/images/config-rust-environment/sp20171009_234240.png)
+[![sp20171009_234240.png](https://i.loli.net/2018/05/08/5af1c0c3af555.png)](https://i.loli.net/2018/05/08/5af1c0c3af555.png)
 
-![](/images/config-rust-environment/sp20171009_234325.png)
+[![sp20171009_234325.png](https://i.loli.net/2018/05/08/5af1c0c364a10.png)](https://i.loli.net/2018/05/08/5af1c0c364a10.png)
 
 ## 鼠标悬浮提示
 
-![](/images/config-rust-environment/sp20171009_234422.png)
+[![sp20171009_234422.png](https://i.loli.net/2018/05/08/5af1c0c37dffa.png)](https://i.loli.net/2018/05/08/5af1c0c37dffa.png)
 
 ## 代码自动补全
 
-![](/images/config-rust-environment/code-completion.gif)
+[![code-completion.gif](https://i.loli.net/2018/05/08/5af1c0c47acbf.gif)](https://i.loli.net/2018/05/08/5af1c0c47acbf.gif)
 
 ## 错误或警告提示（On-the-fly）
 
-![](/images/config-rust-environment/sp20171009_234956.png)
+[![sp20171009_234956.png](https://i.loli.net/2018/05/08/5af1c0c3df71f.png)](https://i.loli.net/2018/05/08/5af1c0c3df71f.png)
 
 生命周期不正确也能检测（此时文件没有保存）：
 
-![](/images/config-rust-environment/sp20171009_235453.png)
+[![sp20171009_235453.png](https://i.loli.net/2018/05/08/5af1c0c3823ff.png)](https://i.loli.net/2018/05/08/5af1c0c3823ff.png)
 
 对于有些问题，能够通过编辑器修复：
 
-![](/images/config-rust-environment/auto-fix.gif)
+[![auto-fix.gif](https://i.loli.net/2018/05/08/5af1c17bdd32d.gif)](https://i.loli.net/2018/05/08/5af1c17bdd32d.gif)
 
 # 总结
 

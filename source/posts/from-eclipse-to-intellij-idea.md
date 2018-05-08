@@ -4,7 +4,6 @@ id: 44
 tags:
   - Java
 date: 2016-10-23 13:25:31
-thumbnail: /images/from-eclipse-to-intellij-idea/sp20161022_232053.png
 ---
 
 之前看微信公众号说用 IntelliJ IDEA 的人比用 Eclipse 的人多，而且 IntelliJ IDEA 的评价不错，于是去试一试 IntelliJ IDEA。
@@ -15,7 +14,7 @@ thumbnail: /images/from-eclipse-to-intellij-idea/sp20161022_232053.png
 
 这是我对 [CustomSkinLoader GUI](https://github.com/g-plane/CustomSkinLoader-GUI) 进行代码修改的截图，我在对 `config` 类进行封装，并写出相应的 `get` 方法和 `set` 方法。当我写好所有的 `set` 方法，准备来写 `get` 方法的时候，竟然出现：
 
-![](/images/from-eclipse-to-intellij-idea/sp20161022_232053.png)
+[![sp20161022_232053.png](https://i.loli.net/2018/05/08/5af1c1dc832ea.png)](https://i.loli.net/2018/05/08/5af1c1dc832ea.png)
 
 它可以自动列出你想要的方法名，非常方便。
 

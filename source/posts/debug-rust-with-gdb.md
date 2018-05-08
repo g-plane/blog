@@ -3,7 +3,6 @@ title: 使用 GDB 调试 Rust 程序
 date: 2017-10-12 19:23:55
 tags:
   - Rust
-thumbnail: /images/debug-rust-with-gdb/sp20171012_200216.png
 ---
 
 # 安装调试工具
@@ -39,7 +38,7 @@ pacman -S mingw-w64-x86_64-toolchain # 安装相关工具，这包含 GDB 等工
 
 将配置中的 `target` 项改为 Rust 生成的 Debug 版的可执行文件路径。文件名通常是你当前的 Rust 的项目名。如图：
 
-![](/images/debug-rust-with-gdb/sp20171012_200135.png)
+[![sp20171012_200135.png](https://i.loli.net/2018/05/08/5af1c034b84ea.png)](https://i.loli.net/2018/05/08/5af1c034b84ea.png)
 
 为了不用我们每次调试前手动运行 `cargo build`，我们可以把这条命令作为 VS Code 的一项任务，并加入到 `.vscode/tasks.json` 中。例如我这里我为这个任务命名为「build」。
 
@@ -51,8 +50,6 @@ pacman -S mingw-w64-x86_64-toolchain # 安装相关工具，这包含 GDB 等工
 
 打断点是没有问题的，不过似乎不是所有的变量类型都能直接显示出来。
 
-![](/images/debug-rust-with-gdb/sp20171012_200216.png)
-
-------
+[![sp20171012_200216.png](https://i.loli.net/2018/05/08/5af1c034c511f.png)](https://i.loli.net/2018/05/08/5af1c034c511f.png)
 
 The End.
