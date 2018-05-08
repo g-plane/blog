@@ -1,3 +1,5 @@
+const getTags = require('./scripts/tags')
+
 const fonts = [
   'Roboto Mono',
   'Roboto Slab'
@@ -33,5 +35,8 @@ module.exports = {
         href: 'https://hexo-blog-1251929322.file.myqcloud.com/avatar/fatpig.png'
       }
     ]
+  },
+  generate: {
+    routes: getTags
   }
 }

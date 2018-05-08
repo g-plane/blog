@@ -93,6 +93,7 @@ function generatePostsData(docs) {
   const data = docs.map(({ name, matter }) => ({
     name,
     title: matter.attributes.title,
+    tags: matter.attributes.tags,
     date: matter.attributes.date.toLocaleDateString('zh-Hans-CN', {
       timeZone: 'UTC',
       year: 'numeric',

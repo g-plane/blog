@@ -1,11 +1,8 @@
 <template>
-  <div id="index">
+  <div class="tag-page">
     <div class="blog-name">Pig Fang</div>
 
-    <div class="interal-links">
-      <nuxt-link class="first" to="/about">About Me</nuxt-link>
-      <nuxt-link to="/friends">Friends</nuxt-link>
-    </div>
+    <div class="tag">Tag: {{ tag }}</div>
 
     <paginate name="posts" :list="posts" :per="7" class="posts-list">
       <li v-for="post in paginated('posts')" :key="post.name">
@@ -38,18 +35,22 @@ export default {
   },
   head() {
     return {
-      title: 'Pig Fang'
+      title: `Tag: ${this.tag} - Pig Fang`
     }
   },
   data() {
     return {
+      tag: '',
       posts: [],
       paginate: ['posts']
     }
   },
-  asyncData() {
+  asyncData({ params }) {
+    const { tag } = params
+    const posts = require('../../static/posts.json')
     return {
-      posts: require('../static/posts.json'),
+      tag,
+      posts: posts.filter(post => post.tags.includes(tag)),
       paginate: ['posts']
     }
   }
@@ -57,7 +58,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#index
+.tag-page
   display flex
   flex-direction column
   align-items center
@@ -70,29 +71,8 @@ export default {
     color #373D42
     cursor default
 
-.interal-links
-  margin-top 20px
-  display flex
-  justify-content space-between
-
-  @media (max-width: 768px)
-    width 55%
-  @media (min-width: 768px) and (max-width: 960px)
-    width 30%
-  @media (min-width: 960px) and (max-width: 1920px)
-    width 17%
-  @media (min-width: 1920px)
-    width 10%
-
-  a
-    text-decoration none
-    color #000
-    padding 0 0 8px 0
-    border-bottom 3px solid transparent
-    transition border 0.5s, color 0.2s
-    &:hover
-      color #41b883
-      border-bottom 3px solid #41b883
+.tag
+  margin-top 15px
 
 .posts-list
   display flex

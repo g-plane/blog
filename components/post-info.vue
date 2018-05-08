@@ -6,7 +6,11 @@
     </span>
     <span>
       <i class="icon" data-feather="tag" width="16" height="16" />
-      {{ tags }}
+      <nuxt-link
+        v-for="tag in splitedTags"
+        :key="tag"
+        :to="`/tag/${tag}`"
+      >{{ tag }}</nuxt-link>
     </span>
   </div>
 </template>
@@ -16,6 +20,11 @@ export default {
   props: {
     date: String,
     tags: String
+  },
+  computed: {
+    splitedTags() {
+      return this.tags.split(',')
+    }
   }
 }
 </script>
@@ -30,4 +39,9 @@ export default {
 
 .icon
   margin-bottom -4px
+
+a
+  text-decoration none
+  color #999
+  margin-right 8px
 </style>
