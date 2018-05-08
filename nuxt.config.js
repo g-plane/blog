@@ -4,6 +4,9 @@ const fonts = [
 ].map(name => name.replace(/\s/g, '+')).join('|')
 
 module.exports = {
+  css: [
+    '@/assets/common.styl'
+  ],
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/feed',
@@ -22,6 +25,10 @@ module.exports = {
       {
         rel: 'stylesheet',
         href: `https://fonts.googleapis.com/css?family=${fonts}`
+      },
+      {
+        rel: 'icon',
+        href: 'https://hexo-blog-1251929322.file.myqcloud.com/avatar/fatpig.png'
       }
     ]
   },
