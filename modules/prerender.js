@@ -65,6 +65,7 @@ async function generateFile({ name, matter }) {
     name,
     title: matter.attributes.title,
     date: matter.attributes.date.toLocaleString('zh-Hans-CN', {
+      timeZone: 'UTC',
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
@@ -93,6 +94,7 @@ function generatePostsData(docs) {
     name,
     title: matter.attributes.title,
     date: matter.attributes.date.toLocaleDateString('zh-Hans-CN', {
+      timeZone: 'UTC',
       year: 'numeric',
       month: '2-digit',
       day: '2-digit'
