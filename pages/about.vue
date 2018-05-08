@@ -54,6 +54,7 @@
       </markdown>
       <div class="side-dummy" />
     </main>
+    <vue-disqus class="disqus" shortname="gplane-blog" />
     <footer-bar />
   </div>
 </template>
@@ -162,9 +163,17 @@ main
   @media (min-width: 768px)
     width 38%
 
-.main-content
+.disqus
   @media (max-width: 768px)
     width 90%
   @media (min-width: 768px)
-    width 20%
+    width 54%
+
+.disqus
+  position relative
+  margin-bottom 30px
+  @media (max-width: 768px)
+    left 15px
+  @media (min-width: 768px)
+    left 23%
 </style>

@@ -10,9 +10,13 @@ module.exports = {
   modules: [
     '~/modules/prerender',
   ],
+  plugins: [
+    '~/plugins/disqus'
+  ],
   vendor: [
     'feather-icons',
-    'highlight.js/styles/paraiso-light.css'
+    'highlight.js/styles/paraiso-light.css',
+    'vue-disqus'
   ],
   head: {
     meta: [

@@ -9,6 +9,7 @@
         <span class="btn-to-top" @click.stop="backToTop">&lt;/&gt;</span>
       </div>
     </main>
+    <vue-disqus class="disqus" shortname="gplane-blog" />
     <footer-bar />
   </div>
 </template>
@@ -76,9 +77,17 @@ main
     @media (max-width: 768px)
       display none
 
-.main-content
+.main-content, .disqus
   @media (max-width: 768px)
     width 90%
   @media (min-width: 768px)
     width 50%
+
+.disqus
+  position relative
+  margin-bottom 30px
+  @media (max-width: 768px)
+    left 15px
+  @media (min-width: 768px)
+    left 25%
 </style>
