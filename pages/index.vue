@@ -112,8 +112,10 @@ export default {
 
   li
     display flex
-    padding 20px 0 20px 0
+    padding 20px 15px 20px 15px
     border-bottom 1px solid #e6e6e6
+    @media (max-width: 768px)
+      padding 20px 0 20px 0
 
 .post-date
   min-width 82px
