@@ -47,12 +47,10 @@ export default {
       paginate: ['posts']
     }
   },
-  async beforeMount() {
-    try {
-      const response = await fetch('/posts.json')
-      this.posts = await response.json()
-    } catch (error) {
-      //
+  asyncData() {
+    return {
+      posts: require('../static/posts.json'),
+      paginate: ['posts']
     }
   }
 }
