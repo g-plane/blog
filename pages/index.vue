@@ -36,6 +36,11 @@ export default {
   components: {
     FooterBar
   },
+  head() {
+    return {
+      title: 'Pig Fang'
+    }
+  },
   data() {
     return {
       posts: [],
@@ -111,6 +116,7 @@ export default {
     border-bottom 1px solid #e6e6e6
 
 .post-date
+  min-width 82px
   margin 2px 35px 0 0
   color #aaa
 
@@ -131,8 +137,15 @@ export default {
   list-style none
   display flex
   justify-content space-between
-  width 16%
   padding 0 0 30px 0
+  @media (max-width: 768px)
+    width 55%
+  @media (min-width: 768px) and (max-width: 960px)
+    width 30%
+  @media (min-width: 960px) and (max-width: 1920px)
+    width 17%
+  @media (min-width: 1920px)
+    width 10%
   a
     cursor pointer
     padding 11px 17px
