@@ -10,6 +10,8 @@ const MarkdownIt = require('markdown-it')
 const MarkdownItAnchor = require('markdown-it-anchor')
 const MarkdownItAttrs = require('markdown-it-attrs')
 const MarkdownItCJKBreaks = require('markdown-it-cjk-breaks')
+const MarkdownItEmoji = require('markdown-it-emoji')
+const MarkdownItFootnote = require('markdown-it-footnote')
 const Feed = require('feed')
 
 const SOURCE_DIR = './source/posts'
@@ -59,6 +61,8 @@ const md = new MarkdownIt('default', {
   })
   .use(MarkdownItAttrs)
   .use(MarkdownItCJKBreaks)
+  .use(MarkdownItEmoji)
+  .use(MarkdownItFootnote)
 
 async function generateFile({ name, matter }) {
   const vueFile = ejs.render(template, {
