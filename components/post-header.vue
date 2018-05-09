@@ -101,11 +101,13 @@ header
 
   @media (max-width: 768px)
     visibility hidden
+    max-width 1px
 
 .right-links
   margin-right 40px
   @media (max-width: 768px)
     visibility hidden
+    max-width 1px
 
   .link
     padding-bottom 13px
