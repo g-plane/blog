@@ -147,8 +147,8 @@ module.exports = function () {
       }))
     docs.sort((a, b) => b.matter.attributes.date.valueOf() -
       a.matter.attributes.date.valueOf())
-    Promise.all(docs.map(generateFile))
-    generatePostsData(docs)
-    generateRss(docs)
+    await Promise.all(docs.map(generateFile))
+    await generatePostsData(docs)
+    await generateRss(docs)
   })
 }
