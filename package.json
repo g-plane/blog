@@ -8,6 +8,7 @@
     "lint": "eslint . -f=beauty --ext .vue"
   },
   "dependencies": {
+    "animate.css": "^3.6.1",
     "feather-icons": "^4.7.0",
     "highlight.js": "^9.12.0",
     "vue-disqus": "^3.0.3"

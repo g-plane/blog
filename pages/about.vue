@@ -99,38 +99,8 @@ export default {
 
 <!-- eslint-disable max-len -->
 <style lang="stylus" scoped>
-/* Copied from Animate.css (start) */
-.animated
-  animation-duration 1s
-  animation-fill-mode both
-
-.animated.infinite
-  animation-iteration-count infinite
-
-@keyframes hinge
-  0%
-    transform-origin top left
-    animation-timing-function ease-in-out
-
-  20%, 60%
-    transform rotate3d(0, 0, 1, 80deg)
-    transform-origin top left
-    animation-timing-function ease-in-out
-
-  40%, 80%
-    transform rotate3d(0, 0, 1, 60deg)
-    transform-origin top left
-    animation-timing-function ease-in-out
-    opacity 1
-
-  to
-    transform translate3d(0, 700px, 0)
-    opacity 0
-
-.hinge
-  animation-duration 2s
-  animation-name hinge
-/* Copied from Animate.css (end) */
+@import "animate.css/source/_base.css"
+@import "animate.css/source/specials/hinge.css"
 
 header
   height 50vh
