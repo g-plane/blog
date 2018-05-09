@@ -9,6 +9,7 @@
 
 article
   color #2c3e50
+  font-family 'Roboto Slab', 'Microsoft Yahei', 'Ubunto Mono'
   text-shadow 0 0 1px rgba(0, 0, 0, 0.22)
 
   p, ul, ol
