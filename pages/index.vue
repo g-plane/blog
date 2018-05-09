@@ -7,7 +7,7 @@
       <nuxt-link to="/friends">Friends</nuxt-link>
     </div>
 
-    <paginate name="posts" :list="posts" :per="7" class="posts-list">
+    <paginate :list="posts" :per="7" name="posts" class="posts-list">
       <li v-for="post in paginated('posts')" :key="post.name">
         <span class="post-date">{{ post.date }}</span>
         <nuxt-link :to="`/p/${post.name}/`" class="post-title">
@@ -16,10 +16,11 @@
       </li>
     </paginate>
 
-    <paginate-links for="posts" :simple="{
+    <paginate-links :simple="{
       next: 'Next »',
       prev: '« Back'
-    }"></paginate-links>
+    }" for="posts"
+    />
 
     <footer-bar />
   </div>
@@ -62,7 +63,7 @@ export default {
   flex-direction column
   align-items center
   font-family 'Roboto Slab', 'Microsoft Yahei', 'Ubunto Mono'
-  
+
   .blog-name
     margin-top 5%
     text-align center
@@ -100,7 +101,7 @@ export default {
   list-style none
   max-width 60vw
   padding 0 0 0 0
-  
+
   @media (max-width: 768px)
     max-width 85vw
 

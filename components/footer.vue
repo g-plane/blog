@@ -7,7 +7,7 @@
         rel="noopener"
         href="mailto:g-plane@hotmail.com"
       >
-        <i data-feather="mail"></i>
+        <i data-feather="mail" />
       </a>
       <a
         class="github"
@@ -15,7 +15,7 @@
         rel="noopener"
         href="https://github.com/g-plane"
       >
-        <i data-feather="github"></i>
+        <i data-feather="github" />
       </a>
       <a
         class="twitter"
@@ -23,7 +23,7 @@
         rel="noopener"
         href="https://twitter.com/g3plane"
       >
-        <i data-feather="twitter"></i>
+        <i data-feather="twitter" />
       </a>
       <a
         class="rss"
@@ -31,7 +31,7 @@
         rel="noopener"
         href="/rss2.xml"
       >
-        <i data-feather="rss"></i>
+        <i data-feather="rss" />
       </a>
     </div>
 
@@ -44,7 +44,8 @@
         <img
           alt="Creative Commons License"
           style="border-width:0"
-          src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+          src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+        >
       </a>
       © Pig Fang
     </div>
@@ -52,7 +53,7 @@
     <div class="coding-pages-copyright">
       <p>
         Hosted by <a href="https://pages.coding.me" style="font-weight: bold">
-        Coding Pages</a>
+          Coding Pages</a>
       </p>
     </div>
   </footer>

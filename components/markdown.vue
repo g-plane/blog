@@ -85,7 +85,7 @@ article
       line-height 1.5em
       padding 0.4em 0.8em
       border 1px solid #ddd
-    
+
   h1, h2, h3, h4, h5, h6
     &:hover .header-anchor
       opacity 1

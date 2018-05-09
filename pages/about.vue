@@ -16,9 +16,10 @@
 
         <p>嗯，我常用的 ID 是 <code>gplane</code> 或 <code>GPlane</code>，
         有时候你可能看到带「<code>-</code>」的版本，也就是 <code>g-plane</code>，例如我的 GitHub。
-        <code>Pig Fang</code> 这个很显然不是我的真名（然而姓是真的，具体是哪个汉字你们自己猜吧），
-        但已经被我在不少地方如 GitHub 和 Twitter 上使用。</p>
+          <code>Pig Fang</code> 这个很显然不是我的真名（然而姓是真的，具体是哪个汉字你们自己猜吧），
+          但已经被我在不少地方如 GitHub 和 Twitter 上使用。</p>
 
+        <!-- eslint-disable max-len -->
         <ul>
           <li>目前是大二狗</li>
           <li>数学渣，英语一般般</li>
@@ -38,6 +39,7 @@
           <li>喜欢的声优是神谷浩史、花泽香菜、大西沙织、德井青空、种田梨沙（按我所认识的时间先后排序）</li>
         </ul>
 
+
         <h2>怎样能找到我？</h2>
         <ul>
           <li><p>邮箱：<a href="mailto:g-plane@hotmail.com">g-plane@hotmail.com</a></p></li>
@@ -49,6 +51,7 @@
           <li>Twitter: <a href="https://twitter.com/g3plane">@g3plane</a></li>
           <li>网易云音乐：<a href="http://music.163.com/#/user/home?id=62126971">@gplane</a></li>
         </ul>
+        <!-- eslint-enable max-len -->
 
         <p><nuxt-link to="/">Back to home</nuxt-link></p>
       </markdown>
@@ -83,7 +86,7 @@ export default {
       if (this.clicked >= 20) {
         Array.from(this.$refs.content.$el.querySelectorAll('*'))
           .forEach(el => setTimeout(
-            () => el.className += ' animated hinge',
+            () => (el.className += ' animated hinge'),
             2000 * Math.random()
           ))
       } else {
@@ -94,6 +97,7 @@ export default {
 }
 </script>
 
+<!-- eslint-disable max-len -->
 <style lang="stylus" scoped>
 /* Copied from Animate.css (start) */
 .animated

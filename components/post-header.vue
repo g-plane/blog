@@ -19,7 +19,7 @@ export default {
     if (!window.$title) {
       Object.defineProperty(window, '$title', {
         get: () => this.title,
-        set: value => this.title = value
+        set: value => (this.title = value)
       })
     }
   },
@@ -32,7 +32,7 @@ export default {
     }
     Array.from(document.querySelectorAll('.link'))
       .forEach(el => {
-        el.onmouseenter = () => el.style.color = '#41b883'
+        el.onmouseenter = () => (el.style.color = '#41b883')
         el.onmouseleave = () => {
           el.style.color = scrollPostion() > 0.5 ? '#fff' : '#000'
         }
@@ -50,7 +50,7 @@ export default {
           ? 'rgba(0, 8, 6, 0.8)'
           : `rgba(${rgb.join()}, 0.8)`
       Array.from(document.querySelectorAll('.link'))
-        .forEach(el => el.style.color = position > 0.5 ? '#fff' : '#000')
+        .forEach(el => (el.style.color = position > 0.5 ? '#fff' : '#000'))
       document
         .querySelector('header')
         .style

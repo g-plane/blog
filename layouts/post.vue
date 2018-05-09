@@ -23,6 +23,16 @@ export default {
     HeaderBar,
     FooterBar
   },
+  mounted() {
+    const el = document.querySelector('.btn-to-top')
+    window.addEventListener('scroll', () => {
+      const total = document.body.scrollHeight -
+        window.innerHeight +
+        document.body.scrollTop
+      const position = window.scrollY / total
+      el.style.opacity = position > 0.1 ? 1 : 0
+    })
+  },
   methods: {
     backToTop() {
       const timer = window.setInterval(() => {
@@ -34,16 +44,6 @@ export default {
       }, 20)
     }
   },
-  mounted() {
-    const el = document.querySelector('.btn-to-top')
-    window.addEventListener('scroll', () => {
-      const total = document.body.scrollHeight -
-        window.innerHeight +
-        document.body.scrollTop
-      const position = window.scrollY / total
-      el.style.opacity = position > 0.1 ? 1 : 0
-    })
-  }
 }
 </script>
 
