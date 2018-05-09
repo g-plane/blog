@@ -38,5 +38,8 @@ module.exports = {
   },
   generate: {
     routes: getTags
+  },
+  render: {
+    resourceHints: false
   }
 }
