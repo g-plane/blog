@@ -63,7 +63,9 @@ const md = new MarkdownIt('default', {
   .use(MarkdownItAnchor, {
     level: [1, 2],
     permalink: true,
-    permalinkBefore: true
+    permalinkBefore: true,
+    permalinkSymbol: '#',
+    slugify: require('lodash.kebabcase')
   })
   .use(MarkdownItAttrs)
   .use(MarkdownItCJKBreaks)
