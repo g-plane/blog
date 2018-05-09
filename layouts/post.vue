@@ -1,17 +1,19 @@
 <template>
-  <div class="skeleton">
-    <span id="top" />
-    <header-bar />
-    <main>
-      <div class="side-dummy" />
-      <nuxt class="main-content" />
-      <div class="side-dummy right-dummy">
-        <span class="btn-to-top" @click.stop="backToTop">&lt;/&gt;</span>
-      </div>
-    </main>
-    <vue-disqus class="disqus" shortname="gplane-blog" />
-    <footer-bar />
-  </div>
+  <transition name="page">
+    <div class="skeleton">
+      <span id="top" />
+      <header-bar />
+      <main>
+        <div class="side-dummy" />
+        <nuxt class="main-content" />
+        <div class="side-dummy right-dummy">
+          <span class="btn-to-top" @click.stop="backToTop">&lt;/&gt;</span>
+        </div>
+      </main>
+      <vue-disqus class="disqus" shortname="gplane-blog" />
+      <footer-bar />
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -43,7 +45,7 @@ export default {
         }
       }, 20)
     }
-  },
+  }
 }
 </script>
 
