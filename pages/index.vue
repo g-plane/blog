@@ -10,7 +10,7 @@
     <paginate name="posts" :list="posts" :per="7" class="posts-list">
       <li v-for="post in paginated('posts')" :key="post.name">
         <span class="post-date">{{ post.date }}</span>
-        <nuxt-link :to="'/p/' + post.name" class="post-title">
+        <nuxt-link :to="`/p/${post.name}/`" class="post-title">
           {{ post.title }}
         </nuxt-link>
       </li>
