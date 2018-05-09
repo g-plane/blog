@@ -26,6 +26,12 @@ try {
   fs.mkdirSync(DEST_DIR)
 }
 
+try {
+  fs.statSync('./static')
+} catch (error) {
+  fs.mkdirSync('./static')
+}
+
 ejs.cache = lru(100)
 const template = fs.readFileSync('./scaffolds/post.vue', 'utf-8')
 const md = new MarkdownIt('default', {
@@ -147,8 +153,8 @@ module.exports = function () {
       }))
     docs.sort((a, b) => b.matter.attributes.date.valueOf() -
       a.matter.attributes.date.valueOf())
-    await Promise.all(docs.map(generateFile))
-    await generatePostsData(docs)
-    await generateRss(docs)
+    Promise.all(docs.map(generateFile))
+    generatePostsData(docs)
+    generateRss(docs)
   })
 }
