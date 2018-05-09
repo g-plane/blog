@@ -161,6 +161,7 @@ export default {
     width 10%
   a
     cursor pointer
+    user-select none
     padding 11px 17px
     border 1.4px solid transparent
     border-radius 3px

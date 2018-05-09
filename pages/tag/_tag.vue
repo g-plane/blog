@@ -125,10 +125,7 @@ export default {
   font-size 18px
   &:hover
     color #41b883
-</style>
 
-<!-- This is for `vue-paginate` and DO NOT add `scoped` flag. -->
-<style lang="stylus">
 .paginate-links
   list-style none
   display flex
@@ -144,6 +141,7 @@ export default {
     width 10%
   a
     cursor pointer
+    user-select none
     padding 11px 17px
     border 1.4px solid transparent
     border-radius 3px
