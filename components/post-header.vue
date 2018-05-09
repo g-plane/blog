@@ -67,7 +67,6 @@ export default {
 header
   position fixed
   width 100%
-  height 55px
   display flex
   padding 0 18px 0 18px
   z-index 999
@@ -100,8 +99,13 @@ header
     color #41b883
     border-bottom 5px solid #41b883
 
+  @media (max-width: 768px)
+    visibility hidden
+
 .right-links
   margin-right 40px
+  @media (max-width: 768px)
+    visibility hidden
 
   .link
     padding-bottom 13px
