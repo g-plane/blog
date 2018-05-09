@@ -20,6 +20,11 @@ export default {
   components: {
     FooterBar
   },
+  head() {
+    return {
+      title: 'Friends - Pig Fang'
+    }
+  },
   data() {
     return {
       links: [
