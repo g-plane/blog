@@ -7,31 +7,30 @@
       <nuxt-link to="/friends">Friends</nuxt-link>
     </div>
 
-    <paginate :list="posts" :per="7" name="posts" class="posts-list">
-      <li v-for="post in paginated('posts')" :key="post.name">
+    <ul class="posts-list">
+      <li v-for="post in displayedPosts" :key="post.name">
         <span class="post-date">{{ post.date }}</span>
         <nuxt-link :to="`/p/${post.name}/`" class="post-title">
           {{ post.title }}
         </nuxt-link>
       </li>
-    </paginate>
+    </ul>
 
-    <paginate-links :simple="{
-      next: 'Next »',
-      prev: '« Back'
-    }" for="posts"
-    />
+    <ul class="paginate-links">
+      <li :class="{ disabled: currentPage === 1 }">
+        <a @click="prevPage">« Back</a>
+      </li>
+      <li :class="{ disabled: currentPage === maxPages }">
+        <a @click="nextPage">Next »</a>
+      </li>
+    </ul>
 
     <footer-bar />
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import VuePaginate from 'vue-paginate'
 import FooterBar from '@/components/footer'
-
-Vue.use(VuePaginate)
 
 export default {
   components: {
@@ -45,13 +44,33 @@ export default {
   data() {
     return {
       posts: [],
-      paginate: ['posts']
+      currentPage: 1
+    }
+  },
+  computed: {
+    displayedPosts() {
+      const offset = this.currentPage - 1
+      return this.posts.slice(7 * offset, 7 * this.currentPage)
+    },
+    maxPages() {
+      return Math.ceil(this.posts.length / 7)
+    }
+  },
+  methods: {
+    prevPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--
+      }
+    },
+    nextPage() {
+      if (this.currentPage < this.maxPages) {
+        this.currentPage++
+      }
     }
   },
   asyncData() {
     return {
-      posts: require('../static/posts.json'),
-      paginate: ['posts']
+      posts: require('../static/posts.json')
     }
   }
 }
@@ -126,10 +145,7 @@ export default {
   font-size 18px
   &:hover
     color #41b883
-</style>
 
-<!-- This is for `vue-paginate` and DO NOT add `scoped` flag. -->
-<style lang="stylus">
 .paginate-links
   list-style none
   display flex
