@@ -13,7 +13,7 @@ module.exports = async () => {
     .map(async name => {
       const content = await readFile(path.join(SOURCE_DIR, name), 'utf-8')
       return fm(content)
-    }))
+    }))  // eslint-disable-line vue/script-indent
   return Array.from(
     new Set(docs.reduce((acc, cur) => acc.concat(cur.attributes.tags), []))
   ).map(tag => `/tag/${tag}`)

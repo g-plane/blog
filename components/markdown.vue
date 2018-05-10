@@ -92,4 +92,23 @@ article
 
   a.header-anchor
     opacity 0
+
+  .tip
+    border-left 7px solid transparent
+    p
+      padding 8px
+    .tip-title
+      font-weight 600
+
+  .tip-info
+    border-color #42b983
+    background-color #f3f5f7
+
+  .tip-warning
+    border-color #e7c000
+    background-color rgba(255,229,100,.3)
+
+  .tip-danger
+    border-color #c00
+    background-color #ffe6e6
 </style>
