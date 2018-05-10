@@ -19,7 +19,9 @@ tags:
 
 [![屏幕快照 2018-02-10 上午9.55.20.png](https://i.loli.net/2018/02/10/5a7e511f8ecb0.png)](https://i.loli.net/2018/02/10/5a7e511f8ecb0.png)
 
+::: info
 这个 VS Code 的主题是 Palenight Theme。（需要先安装 Material Palenight Theme 扩展）
+:::
 
 macOS 还有一个我一直羡慕的功能是截图带阴影，看看上面的图片就知道了。（不过我不知道最终在博客的页面能不能很好的表现）
 
