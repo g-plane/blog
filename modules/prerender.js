@@ -1,5 +1,5 @@
-const fs = require('fs/promises')
-const { statSync, mkdirSync, readdirSync, readFileSync } = require('fs')
+const { promisify } = require('util')
+const fs = require('fs')
 const path = require('path')
 const chokidar = require('chokidar')
 const lru = require('lru-cache')
@@ -12,11 +12,14 @@ const generateRss = require('./rss')
 const SOURCE_DIR = './source/posts'
 const DEST_DIR = './pages/p'
 
+const writeFile = promisify(fs.writeFile)
+const readFile = promisify(fs.readFile)
+
 function mkdir(dir) {
   try {
-    statSync(dir)
+    fs.statSync(dir)
   } catch (error) {
-    mkdirSync(dir)
+    fs.mkdirSync(dir)
   }
 }
 
@@ -24,7 +27,7 @@ mkdir(DEST_DIR)
 mkdir('./static')
 
 ejs.cache = lru(100)
-const template = readFileSync('./scaffolds/post.vue', 'utf-8')
+const template = fs.readFileSync('./scaffolds/post.vue', 'utf-8')
 
 async function generateFile({ name, matter }) {
   const sfc = ejs.render(template, {
@@ -42,12 +45,12 @@ async function generateFile({ name, matter }) {
     tags: matter.attributes.tags,
     content: md.render(matter.body)
   })
-  await fs.writeFile(`${DEST_DIR}/${name}.vue`, sfc)
+  await writeFile(`${DEST_DIR}/${name}.vue`, sfc)
 }
 
 chokidar.watch(`${SOURCE_DIR}/*.md`).on('all', async (event, filePath) => {
   if (event === 'add' || event === 'change') {
-    const content = await fs.readFile(filePath, 'utf-8')
+    const content = await readFile(filePath, 'utf-8')
     await generateFile({
       name: path.basename(filePath, '.md'),
       matter: fm(content)
@@ -57,10 +60,10 @@ chokidar.watch(`${SOURCE_DIR}/*.md`).on('all', async (event, filePath) => {
 
 module.exports = function () {
   this.nuxt.hook('ready', async () => {
-    const posts = await Promise.all(readdirSync(SOURCE_DIR)
+    const posts = await Promise.all(fs.readdirSync(SOURCE_DIR)
       .filter(name => name.endsWith('.md'))
       .map(async name => {
-        const content = await fs.readFile(path.join(SOURCE_DIR, name), 'utf-8')
+        const content = await readFile(path.join(SOURCE_DIR, name), 'utf-8')
         return {
           name: path.basename(name, '.md'),
           matter: fm(content)

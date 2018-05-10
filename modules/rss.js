@@ -1,4 +1,5 @@
-const fs = require('fs/promises')
+const { promisify } = require('util')
+const fs = require('fs')
 const Feed = require('feed')
 const md = require('./markdown')
 
@@ -25,5 +26,5 @@ module.exports = posts => {
       date: doc.matter.attributes.date
     })
   })
-  return fs.writeFile('./static/rss2.xml', feed.rss2())
+  return promisify(fs.writeFile)('./static/rss2.xml', feed.rss2())
 }

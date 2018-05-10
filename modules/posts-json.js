@@ -1,4 +1,5 @@
-const fs = require('fs/promises')
+const { promisify } = require('util')
+const fs = require('fs')
 
 module.exports = posts => {
   const data = posts.map(({ name, matter }) => ({
@@ -12,5 +13,5 @@ module.exports = posts => {
       day: '2-digit'
     })
   }))
-  return fs.writeFile('./static/posts.json', JSON.stringify(data))
+  return promisify(fs.writeFile)('./static/posts.json', JSON.stringify(data))
 }
