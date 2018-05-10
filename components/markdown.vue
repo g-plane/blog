@@ -95,6 +95,7 @@ article
 
   .tip
     border-left 7px solid transparent
+    margin-bottom 30px
     p
       padding 8px
     .tip-title
