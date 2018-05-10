@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt generate",
-    "lint": "eslint . -f=beauty --ext .vue"
+    "lint": "eslint . -f=beauty --ext .vue,.js"
   },
   "dependencies": {
     "animate.css": "^3.6.1",
