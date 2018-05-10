@@ -65,6 +65,10 @@ article
     border-left 4px solid #42b983
     color #858585
 
+  hr
+    border 0.4px dashed #ccc
+    margin-top 30px
+
   table
     border-spacing 0
     border-collapse collapse
