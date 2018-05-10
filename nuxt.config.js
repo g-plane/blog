@@ -18,6 +18,7 @@ module.exports = {
   vendor: [
     'feather-icons',
     'highlight.js/styles/paraiso-light.css',
+    'lodash.throttle',
     'vue-disqus'
   ],
   head: {
