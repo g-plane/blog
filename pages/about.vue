@@ -133,7 +133,7 @@ main
 
 .side-dummy
   @media (max-width: 768px)
-    width 15px
+    width 60px
   @media (min-width: 768px)
     width 38%
 
@@ -143,7 +143,6 @@ main
   @media (min-width: 768px)
     width 54%
 
-.disqus
   position relative
   margin-bottom 30px
   @media (max-width: 768px)
