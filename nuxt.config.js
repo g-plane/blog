@@ -1,10 +1,5 @@
 const getTags = require('./scripts/tags')
 
-const fonts = [
-  'Roboto Mono',
-  'Roboto Slab'
-].map(name => name.replace(/\s/g, '+')).join('|')
-
 module.exports = {
   css: [
     '@/assets/common.styl'
@@ -28,10 +23,6 @@ module.exports = {
       { name: 'theme-color', content: '#63BB0A' }
     ],
     link: [
-      {
-        rel: 'stylesheet',
-        href: `https://fonts.googleapis.com/css?family=${fonts}`
-      },
       {
         rel: 'icon',
         href: 'https://hexo-blog-1251929322.file.myqcloud.com/avatar/fatpig.png'
