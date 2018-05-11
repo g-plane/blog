@@ -67,7 +67,8 @@ article
 
   hr
     border 0.4px dashed #ccc
-    margin-top 30px
+    .footnotes-sep
+      margin-top 30px
 
   table
     border-spacing 0
