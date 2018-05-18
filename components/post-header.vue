@@ -1,5 +1,5 @@
 <template>
-  <header ref="header">
+  <header>
     <nuxt-link class="link" to="/">Pig Fang</nuxt-link>
     <div class="post-title">{{ title }}</div>
     <div class="right-links">
@@ -9,33 +9,6 @@
 </template>
 
 <script>
-import throttle from 'lodash.throttle'
-
-const rgb = [249, 249, 250]
-let header
-
-function scrollPostion() {
-  const total = document.body.scrollHeight -
-    window.innerHeight +
-    document.body.scrollTop
-  return window.scrollY / total
-}
-
-const changeColor = throttle(() => {
-  if (!header) {
-    return
-  }
-  const position = scrollPostion()
-  const index = ~~(Math.random() * 3)
-  rgb[index] = (1 - position) * 255
-  header.style.color = position > 0.5 ? '#fff' : '#000'
-  header.style.backgroundColor = position >= 0.9
-    ? 'rgba(0, 8, 6, 0.8)'
-    : `rgba(${rgb.join()}, 0.8)`
-  Array.from(document.querySelectorAll('.link'))
-    .forEach(el => (el.style.color = position > 0.5 ? '#fff' : '#000'))
-}, 250)
-
 export default {
   data() {
     return {
@@ -51,21 +24,7 @@ export default {
     }
   },
   mounted() {
-    Array.from(document.querySelectorAll('.link'))
-      .forEach(el => {
-        el.onmouseenter = () => (el.style.color = '#41b883')
-        el.onmouseleave = () => {
-          el.style.color = scrollPostion() > 0.5 ? '#fff' : '#000'
-        }
-      })
-    header = this.$refs.header  // eslint-disable-line prefer-destructuring
-
-    window.addEventListener('scroll', changeColor)
-
     this.title = window.$title
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', changeColor)
   }
 }
 </script>
