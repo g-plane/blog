@@ -49,7 +49,7 @@ export default {
           link: 'https://blog.nciyuan.net/'
         },
         {
-          name: '刘伟的博客',
+          name: '刘伟',
           link: 'https://darrenliuwei.com/'
         },
       ]
