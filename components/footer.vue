@@ -49,13 +49,6 @@
       </a>
       © Pig Fang
     </div>
-
-    <div class="coding-pages-copyright">
-      <p>
-        Hosted by <a href="https://pages.coding.me" style="font-weight: bold">
-          Coding Pages</a>
-      </p>
-    </div>
   </footer>
 </template>
 
@@ -105,10 +98,4 @@ footer
   .rss
     &:hover
       color #ef8c17
-
-.coding-pages-copyright
-  font-size 8px
-  a
-    text-decoration none
-    color #000
 </style>
