@@ -110,7 +110,7 @@ header
   background-position center center
   background-repeat no-repeat
   background-size cover
-  background-image url("https://hexo-blog-1251929322.file.myqcloud.com/intro/intro-desktop.jpg")
+  background-image url("/intro-desktop.jpg")
   .shadow
     position absolute
     left 0

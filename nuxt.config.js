@@ -25,7 +25,7 @@ module.exports = {
     link: [
       {
         rel: 'icon',
-        href: 'https://hexo-blog-1251929322.file.myqcloud.com/avatar/fatpig.png'
+        href: '/fatpig.png'
       }
     ]
   },
