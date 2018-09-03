@@ -21,7 +21,7 @@
 
         <!-- eslint-disable max-len -->
         <ul>
-          <li>目前是大二狗</li>
+          <li>目前是大三狗</li>
           <li>数学渣，英语一般般</li>
           <li>中重度强迫症，懒癌晚期</li>
           <li>网易云音乐用户。不过播放本地音乐会用 foobar2000（Windows 下）和 Clementine（Linux 和 macOS 下）</li>
