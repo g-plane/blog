@@ -39,7 +39,6 @@ header
   flex 1
   justify-content space-between
   align-items center
-  border-bottom 1px solid #B0BCC8
   background-color rgba(249, 249, 250, 0.8)
   transition 0.3s
   text-shadow 0 0 1px rgba(0, 0, 0, 0.22)
