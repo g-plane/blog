@@ -10,12 +10,6 @@ module.exports = {
   plugins: [
     '~/plugins/disqus'
   ],
-  vendor: [
-    'feather-icons',
-    'highlight.js/styles/paraiso-light.css',
-    'lodash.throttle',
-    'vue-disqus'
-  ],
   head: {
     meta: [
       { charset: 'utf-8' },
