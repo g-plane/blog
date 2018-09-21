@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 main
   padding-top 85px
   padding-bottom 60px
@@ -70,6 +70,7 @@ main
     bottom -10px
     font-size 100px
     font-weight 900
+    letter-spacing 0.5rem
     opacity 0
     color rgba(0, 0, 0, 0.2)
     cursor pointer
