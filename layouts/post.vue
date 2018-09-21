@@ -57,6 +57,11 @@ main
   display flex
   justify-content center
 
+  @media (max-width: 768px)
+    padding-top 105px
+  @media (min-width: 768px)
+    padding-top 85px
+
 .side-dummy
   @media (max-width: 768px)
     width 15px

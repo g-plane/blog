@@ -4,6 +4,14 @@
   </article>
 </template>
 
+<style>
+@media (max-width: 768px) {
+  .header-anchor {
+    display: none;
+  }
+}
+</style>
+
 <style lang="stylus" scoped>
 @import "highlight.js/styles/paraiso-light.css"
 
@@ -27,15 +35,18 @@ article
     color #2c3e50
 
   h1
-    margin-left -38px
     display block
     font-size 2em
+    @media (min-width: 768px)
+      margin-left -38px
 
   h2
-    margin 45px 0 0.8em -28px
+    margin 45px 0 0.8em
     padding-bottom 0.7em
     border-bottom 1px solid #ddd
     z-index -1
+    @media (min-width: 768px)
+      margin-left -28px
 
   a
     text-decoration none
