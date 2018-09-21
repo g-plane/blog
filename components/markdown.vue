@@ -27,11 +27,12 @@ article
     color #2c3e50
 
   h1
+    margin-left -38px
     display block
     font-size 2em
 
   h2
-    margin 45px 0 0.8em
+    margin 45px 0 0.8em -28px
     padding-bottom 0.7em
     border-bottom 1px solid #ddd
     z-index -1
