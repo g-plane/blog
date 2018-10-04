@@ -9,7 +9,7 @@ module.exports = {
   page: 'Page',
   category: '分类',
   categories: '分类',
-  navigation: 'Nothing cannot be changed.',
+  navigation: '(～o￣3￣)～',
   see_post: '阅读',
   see_all_posts: '查看所有文章',
   no_search_results: '什么都没找到呀',
