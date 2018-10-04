@@ -10,8 +10,8 @@ title: 我的小伙伴们
 按添加时间来排序：
 
 - [哈陆lu](https://halu.lu/)
-- [DreamCity](https://www.littleqiu.net/)
-- [Blessing Studio](https://blessing.studio/)
+- [DreamCity](https://www.littleqiu.net/) - 是 [LittleSkin](https://littleskin.cn) 的站长
+- [Blessing Studio](https://blessing.studio/) - 是开源项目 [Blessing Skin](https://github.com/printempw/blessing-skin-server) 的作者
 - [NciYuan! Blog](https://blog.nciyuan.net/)
 - [刘伟](https://darrenliuwei.com/)
-- [Paji's blog](https://blog.honoka.club/) - 虽然添加的时间有点晚，但我们很早就认识了。
+- [Paji's blog](https://blog.honoka.club/) - 虽然添加的时间有点晚，但我们很早就认识了
