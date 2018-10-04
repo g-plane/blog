@@ -41,7 +41,7 @@ module.exports = {
   subscribe: 'subscribe',
   // 404 page
   title_404: '哦唷……这里什么都没有。',
-  text_404: '',
+  text_404: ' ',
   back_to_homepage: '返回首页',
   // Translate routes
   path_route_categories: 'categories',
