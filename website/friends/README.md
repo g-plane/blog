@@ -14,4 +14,4 @@ title: 我的小伙伴们
 - [Blessing Studio](https://blessing.studio/) - 是开源项目 [Blessing Skin](https://github.com/printempw/blessing-skin-server) 的作者
 - [NciYuan! Blog](https://blog.nciyuan.net/)
 - [刘伟](https://darrenliuwei.com/)
-- [Paji's blog](https://blog.honoka.club/) - 虽然添加的时间有点晚，但我们很早就认识了
+- [Paji's blog](https://blog.honoka.club/) - 虽然添加的时间有点晚，但我们在 2016 年就认识了
