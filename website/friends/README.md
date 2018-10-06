@@ -15,3 +15,15 @@ title: 我的小伙伴们
 - [NciYuan! Blog](https://blog.nciyuan.net/)
 - [刘伟](https://darrenliuwei.com/)
 - [Paji's blog](https://blog.honoka.club/) - 虽然添加的时间有点晚，但我们在 2016 年就认识了
+
+<ClientOnly>
+  <vue-disqus class="mt-30" :shortname="$themeConfig.disqus" />
+</ClientOnly>
+
+<script>
+export default {
+  components: {
+    VueDisqus: () => import(/* webpackChunkName = "vue-disqus" */ 'vue-disqus/dist/vue-disqus.vue')
+  }
+}
+</script>
