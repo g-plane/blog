@@ -34,7 +34,7 @@ module.exports = {
         },
         {
           label: 'RSS',
-          path: 'https://blog.gplane.win/atom.xml'
+          path: '/atom.xml'
         },
       ]
     },

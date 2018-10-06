@@ -16,7 +16,7 @@ const md = new MarkdownIt('default', {
   typographer: true
 })
 ;(async () => {
-  const posts = await Promise.all(
+  let posts = await Promise.all(
     fs
       .readdirSync(SOURCE_DIR)
       .filter(name => name.endsWith('.md') && name !== 'README.md')
@@ -28,6 +28,10 @@ const md = new MarkdownIt('default', {
         }
       })
   )
+
+  posts = posts.sort((a, b) => {
+    return +a.matter.attributes.created_at > +b.matter.attributes.created_at
+  }).reverse()
 
   const feed = new Feed({
     title: 'Pig Fang',
