@@ -59,7 +59,7 @@ Gatsby 给我的感觉是太复杂了，而且我不太了解 React 生态下的
 
 这个页面不再用 Markdown 来完成，而是直接写在 Vue SFC 里。虽然从源代码上看不如 Markdown 那么好维护，不过这个页面不需要经常改变，所以是无所谓的。
 
- 「 关于」页面使用了像之前 Archer 主题那样的 topic background image。只是觉得这么做确实很美观，CSS 代码方面也参考了 Archer 主题。
+「 关于」页面使用了像之前 Archer 主题那样的 topic background image。只是觉得这么做确实很美观，CSS 代码方面也参考了 Archer 主题。
 
 这个页面有个没什么用的彩蛋，诸君可以自行挖掘。
 
@@ -99,7 +99,7 @@ Gatsby 给我的感觉是太复杂了，而且我不太了解 React 生态下的
 - components 目录用于存放各个 Vue 单文件组件（SFC）
 - layouts 目录用于存放页面布局，本质上也是 Vue SFC
 - modules 目录用于存放 Nuxt.js 的 module。整个博客的核心都在这里
-- pages 目录放的就是各个页面，其中有些是人工写好的（如「 关于」页、友链页 ），有些则是动态生成的（如文章页），动态生成的需要记入 `.gitignore`
+- pages 目录放的就是各个页面，其中有些是人工写好的（如「 关于」页、友链页 ），有些则是动态生成的（如文章页），动态生成的需要记入 `.gitignore`
 - scaffolds 目录放的是模板，用于生成保存的 pages 目录的页面
 - scripts 杂七杂八的脚本
 - source 放的是文章源 Markdown 文件
