@@ -64,4 +64,11 @@ lang: en
 
 另外，凭我自己的感觉，ED1 的歌词似乎是从向井戸まなか的角度来写的；而 OP2 的歌词则是从潮留美海的角度来写。
 
+我超喜欢 OP2 这个画面！
+
+![Nagi no Asukara 2013 - Non-telop Opening 3 [BD 1920x1080 23.976fps AVC-yuv444p10 FLAC] - mawen1250.mkv_snapshot_00.59_[2018.10.06_10.16.04].png](https://i.loli.net/2018/10/06/5bb821ed252c2.png)
+![Nagi no Asukara 2013 - Non-telop Opening 3 [BD 1920x1080 23.976fps AVC-yuv444p10 FLAC] - mawen1250.mkv_snapshot_01.00_[2018.10.06_10.16.16].png](https://i.loli.net/2018/10/06/5bb821ef88e7a.png)
+
+---
+
 全文结束。
