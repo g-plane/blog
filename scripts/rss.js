@@ -19,7 +19,7 @@ const md = new MarkdownIt('default', {
   const posts = await Promise.all(
     fs
       .readdirSync(SOURCE_DIR)
-      .filter(name => name.endsWith('.md'))
+      .filter(name => name.endsWith('.md') && name !== 'README.md')
       .map(async name => {
         const content = await readFile(path.join(SOURCE_DIR, name), 'utf-8')
         return {
@@ -31,17 +31,16 @@ const md = new MarkdownIt('default', {
 
   const feed = new Feed({
     title: 'Pig Fang',
-    description: 'Coders are artisans, code is artwork and coding is an art.',
+    description: 'The blog of Pig Fang.',
     id: 'https://blog.gplane.win/',
     link: 'https://blog.gplane.win/',
-    favicon: 'https://hexo-blog-1251929322.file.myqcloud.com/avatar/fatpig.png',
-    generator: 'Nuxt.js'
+    favicon: 'https://blog.gplane.win/fatpig.png'
   })
   posts.forEach(doc => {
     feed.addItem({
       title: doc.matter.attributes.title,
       id: doc.name,
-      link: `https://blog.gplane.win/p/${doc.name}/`,
+      link: `https://blog.gplane.win/posts/${doc.name}.html`,
       author: [
         {
           name: 'Pig Fang',
@@ -50,13 +49,13 @@ const md = new MarkdownIt('default', {
         }
       ],
       content: md.render(doc.matter.body),
-      date: doc.matter.attributes.date
+      date: doc.matter.attributes.created_at
     })
   })
 
   await promisify(fs.writeFile)(
-    './website/.vuepress/dist/rss2.xml',
-    feed.rss2()
+    './website/.vuepress/dist/atom.xml',
+    feed.atom1()
   )
 
   console.log(chalk.green(' DONE  RSS generated!'))
