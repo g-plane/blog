@@ -14,7 +14,7 @@ social:
   - name: github
     url: https://github.com/g-plane
   - name: site
-    url: https://gplane.win
+    url: https://blog.gplane.win/atom.xml
 meta:
   - property: og:image
     content: https://gplane.win/autores/gplane.png

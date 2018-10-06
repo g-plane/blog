@@ -32,10 +32,6 @@ module.exports = {
           label: '分类',
           path: '/categories/'
         },
-        {
-          label: 'RSS',
-          path: '/atom.xml'
-        },
       ]
     },
     nav2: {
