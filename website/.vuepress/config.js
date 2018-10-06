@@ -20,7 +20,6 @@ module.exports = {
   ],
   shouldPrefetch: () => false,
   evergreen: true,
-  serviceWorker: true,
   locales: {
     '/': {
       lang: 'en'
