@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "vuepress dev website",
-    "build": "vuepress build website && node scripts/rss"
+    "build": "vuepress build website && node scripts/rss",
+    "new-post": "node scripts/scaffold.js"
   },
   "devDependencies": {
     "chalk": "^2.4.1",
