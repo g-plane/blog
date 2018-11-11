@@ -124,7 +124,7 @@ T['tokens'] extends true ? { tokens: ESTreeToken[] } : {}
 
 ```typescript
 type ParserResult<T extends ParserOptions> = ESTree.Program &
-  T['tokens'] extends true ? { tokens: ESTreeToken[] } : {}
+  (T['tokens'] extends true ? { tokens: ESTreeToken[] } : {})
 ```
 
 实际的表现是，如果 `ParserOptions` 中的 `tokens` 属性的类型（注意我一直在说「类型」而不是「值」）为 `true`，那么 `ParserResult` 的类型就是 `ESTree.Program & { tokens: ESTreeToken[] }`，否则就是 `ESTree.Program`。
@@ -161,7 +161,7 @@ function parse(code: string, options: ParserOptions): ParserResult<typeof option
 
 ```typescript
 function parse<T extends ParserOptions = ParserOptions>(
-	code: string,
+  code: string,
   options: T
 ): ParserResult<T> {}
 ```
