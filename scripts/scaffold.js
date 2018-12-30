@@ -23,7 +23,7 @@ function now() {
   return (
     d.getFullYear() +
     '-' +
-    d.getMonth() +
+    (d.getMonth() + 1) +
     '-' +
     d.getDate() +
     ' ' +
