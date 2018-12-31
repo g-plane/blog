@@ -35,7 +35,7 @@ lang: en
 
 ![trending.jpg](https://i.loli.net/2018/12/30/5c283ed53ca7f.jpg)
 
-[zsh-yarn-autocompletions](https://github.com/g-plane/zsh-yarn-autocompletions) 是一个 Zsh 下的插件，可以帮助对 [Yarn][https://yarnpkg.com] 中一些命令的补全。PoC 阶段使用 JavaScript 完成（不过那时候并没有放到 GitHub 上），后来为了减少 bootstrapping 耗时，改用 Rust 重写。
+[zsh-yarn-autocompletions](https://github.com/g-plane/zsh-yarn-autocompletions) 是一个 Zsh 下的插件，可以帮助对 [Yarn](https://yarnpkg.com) 中一些命令的补全。PoC 阶段使用 JavaScript 完成（不过那时候并没有放到 GitHub 上），后来为了减少 bootstrapping 耗时，改用 Rust 重写。
 
 ### npm
 
