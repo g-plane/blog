@@ -7,7 +7,7 @@ if (typeof document !== 'undefined') {
   setTimeout(() => {
     const el = document.querySelector('img.cover')
     if (el) {
-      el.src = 'http://s4.cn.bing.net/th?id=OJ.5sntxANxLQPjvw&pid=MSNJVFeeds'
+      el.src = 'https://i.loli.net/2018/12/31/5c29f733b8de2.png'
     }
   })
 }
