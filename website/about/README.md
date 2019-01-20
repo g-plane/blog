@@ -24,7 +24,6 @@ title: 关于 Pig Fang
 - 初三和高中学过一点的 AutoIt v3
 - 大学开始学 JavaScript，特别是2017年花了不少时间去学 JavaScript（还有 TypeScript）
 - 2017 年下半年开始学 Rust
-- 2018 年 9 月开始学 Ruby
 
 ## 怎样能找到我？
 
