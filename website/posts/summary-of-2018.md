@@ -71,7 +71,9 @@ lang: en
 
 GitHub 仓库在 [这里](https://github.com/g-plane/vscode-beefweb)，里面有详细介绍以及 UI 展示。如果要安装的话，直接在 VS Code 的 marketplace 内搜索「beefweb」即可。
 
-今年 9 月的时候，我开始学习 Ruby，并发布了我的第一个 Ruby Gem：[vue_component_compiler](https://rubygems.org/gems/vue_component_compiler)。
+今年 9 月的时候，~~我开始学习 Ruby~~，并发布了我的第一个 Ruby Gem：[vue_component_compiler](https://rubygems.org/gems/vue_component_compiler)。
+
+> 2019 年 1 月下旬更新：已放弃学习 Ruby，但我仍然欣赏 Ruby 这门语言。
 
 ## 博客
 
