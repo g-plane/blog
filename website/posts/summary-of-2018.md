@@ -138,7 +138,7 @@ GitHub 仓库在 [这里](https://github.com/g-plane/vscode-beefweb)，里面有
 
 ## 展望与计划
 
-希望在 2019 年能更多地学习和深入 Rust 和 Ruby。
+希望在 2019 年能更多地学习和深入 Rust。
 
 希望能作为 committer 加入 ESLint 团队。
 
