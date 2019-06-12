@@ -1,15 +1,9 @@
 ---
 title: babel-plugin-import 踩坑记录
-created_at: 2019-05-07 19:19:34
-categories:
-  - development
+date: 2019-05-07 19:19:34
 tags:
   - JavaScript
   - 前端
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 严格来说这并不是一篇博文——只是踩坑记录。

@@ -1,14 +1,8 @@
 ---
 title: 使用 Laradock 进行 Laravel 应用开发
-created_at: 2018-01-08 10:59:20
-categories:
-  - development
+date: 2018-01-08 10:59:20
 tags:
   - PHP
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 ## Laradock?

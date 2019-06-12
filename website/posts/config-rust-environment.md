@@ -1,14 +1,8 @@
 ---
 title: 配置 Rust 开发环境
-created_at: 2017-10-09 21:18:18
-categories:
-  - development
+date: 2017-10-09 21:18:18
 tags:
   - Rust
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 ## 前言

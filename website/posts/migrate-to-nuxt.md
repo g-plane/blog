@@ -1,13 +1,8 @@
 ---
 title: 再见 Hexo，你好 Nuxt.js
-created_at: 2018-05-10 17:30:53
-categories:
+date: 2018-05-10 17:30:53
+tags:
   - blog
-tags: []
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 最近花了几天时间用 Nuxt.js 重写我的博客。

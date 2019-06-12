@@ -1,14 +1,8 @@
 ---
 title: 使用 macOS 一个月以来的一些感受
-created_at: 2018-02-10 09:57:59
-categories:
-  - diy
+date: 2018-02-10 09:57:59
 tags:
   - macOS
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 *多图预警！！！*

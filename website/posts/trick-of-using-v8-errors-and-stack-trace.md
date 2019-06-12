@@ -1,15 +1,9 @@
 ---
 title: V8 的 Error 对象与栈追踪的妙用
-created_at: 2018-03-09 15:42:21
-categories:
-  - development
+date: 2018-03-09 15:42:21
 tags:
   - JavaScript
   - Node.js
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 本文的讲述都是以 Node.js 环境为例子，而 Node.js 使用的 JavaScript 引擎是 V8，因此理论上 Chrome 也能适用，其它浏览器我就不清楚了。

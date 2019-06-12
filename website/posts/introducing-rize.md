@@ -1,14 +1,8 @@
 ---
 title: Introducing Rize
-created_at: 2018-03-04 22:53:49
-categories:
-  - development
+date: 2018-03-04 22:53:49
 tags:
   - JavaScript
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 ## What is "Rize"?

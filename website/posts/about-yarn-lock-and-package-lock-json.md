@@ -1,14 +1,8 @@
 ---
 title: 关于 yarn.lock 和 package-lock.json
-created_at: 2018-06-22 22:46:16
-categories:
-  - development
+date: 2018-06-22 22:46:16
 tags:
   - JavaScript
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 ## 什么是锁？

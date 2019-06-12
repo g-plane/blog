@@ -1,15 +1,9 @@
 ---
 title: 在 Karma + webpack 中生成 source map
-created_at: 2018-02-14 16:42:29
-categories:
-  - development
+date: 2018-02-14 16:42:29
 tags:
   - JavaScript
   - 前端
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 ## 没有 source map 的麻烦

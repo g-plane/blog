@@ -1,14 +1,8 @@
 ---
 title: 2017这一年来
-created_at: 2017-12-31 0:22:20
-categories:
-  - essay
+date: 2017-12-31 0:22:20
 tags:
   - 年终总结
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 不知不觉已经到了2017的尽头，明天就是新的一年。我这个人从来都是没什么计划的，所以你问我2018有什么打算、计划，我只能说“无可奉告”。

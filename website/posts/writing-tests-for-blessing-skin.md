@@ -1,15 +1,9 @@
 ---
 title: 为 Blessing Skin 写测试
-created_at: 2017-11-25 19:21:52
-categories:
-  - development
+date: 2017-11-25 19:21:52
 tags:
   - JavaScript
   - PHP
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 ## 前言

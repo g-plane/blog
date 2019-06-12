@@ -1,14 +1,8 @@
 ---
 title: 解决安装 Manjaro 提示设备问题
-created_at: 2018-07-10 14:36:53
-categories:
-  - development
+date: 2018-07-10 14:36:53
 tags:
   - Linux
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 由于家里的电脑没有 macOS，也懒得去折腾，但我又想在类 Unix 环境下进行开发，因此我选择安装 Linux。然后看了一下 distrowatch.com 上排行第一的发行版是 Manjaro，而且网上的评价似乎也不错，于是决定试一试。

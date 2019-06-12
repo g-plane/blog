@@ -1,6 +1,6 @@
 ---
-view: page
 title: 关于 Pig Fang
+layout: Post
 ---
 
 第一次认真写「关于我」这样的页面：）所以这是 Edition One。
@@ -35,15 +35,3 @@ title: 关于 Pig Fang
 另外我还有别的账号，你可以关注我下面这些账号，但不建议通过这些方式来联系我：
 
 - 网易云音乐：[@gplane](http://music.163.com/#/user/home?id=62126971)
-
-<ClientOnly>
-  <vue-disqus class="mt-30" :shortname="$themeConfig.disqus" />
-</ClientOnly>
-
-<script>
-export default {
-  components: {
-    VueDisqus: () => import(/* webpackChunkName = "vue-disqus" */ 'vue-disqus/dist/vue-disqus.vue')
-  }
-}
-</script>

@@ -1,13 +1,8 @@
 ---
 title: WordPress初成
-categories:
+tags:
   - blog
-tags: []
-created_at: 2016-08-04 17:28:55
-view: post
-layout: post
-author: gplane
-lang: en
+date: 2016-08-04 17:28:55
 ---
 
 早就看过别的文章说 Ghost 与 WordPress 相比性能好，于是一开始用 Ghost。不过用了之后发现 Ghost 好难用啊（起码以前折腾过 WordPress）。

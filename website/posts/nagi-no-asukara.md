@@ -1,14 +1,8 @@
 ---
 title: 谈谈《来自风平浪静的明天》
-categories:
-  - acg
 tags:
-  - 番剧
-created_at: 2018-10-05 10:15:03
-view: post
-layout: post
-author: gplane
-lang: en
+  - ACG
+date: 2018-10-05 10:15:03
 ---
 
 > 这篇博文纯属水文一篇，如果写得不好请见谅

@@ -1,15 +1,9 @@
 ---
 title: 解决 Travis CI 中 Chrome 找不到的办法
-categories:
-  - development
 tags:
   - JavaScript
   - 前端
-created_at: 2017-05-07 11:25:01
-view: post
-layout: post
-author: gplane
-lang: en
+date: 2017-05-07 11:25:01
 ---
 
 ## 前言

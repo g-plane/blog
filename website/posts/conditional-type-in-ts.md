@@ -1,15 +1,8 @@
 ---
 title:  巧用 TypeScript 的「条件类型」
-categories:
-  - development
 tags:
   - TypeScript
-  - JavaScript
-created_at: 2018-11-10 18:55:11
-view: post
-layout: post
-author: gplane
-lang: en
+date: 2018-11-10 18:55:11
 ---
 
 ## 约定

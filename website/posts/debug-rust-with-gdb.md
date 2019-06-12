@@ -1,14 +1,8 @@
 ---
 title: 使用 GDB 调试 Rust 程序
-created_at: 2017-10-12 19:23:55
-categories:
-  - development
+date: 2017-10-12 19:23:55
 tags:
   - Rust
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 ## 安装调试工具

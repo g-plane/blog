@@ -1,14 +1,8 @@
 ---
 title: 转向 MIT
-created_at: 2018-06-27 23:06:50
-categories:
-  - essay
+date: 2018-06-27 23:06:50
 tags:
   - 开源
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 就在刚刚，我将我 GitHub 上所有的项目都转到了 MIT 许可证。

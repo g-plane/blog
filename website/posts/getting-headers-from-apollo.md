@@ -1,14 +1,8 @@
 ---
 title: 从 Apollo Client 中获取 HTTP 头部信息
-created_at: 2018-01-18 11:05:35
-categories:
-  - development
+date: 2018-01-18 11:05:35
 tags:
   - JavaScript
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 ## 基于 JWT 的认证

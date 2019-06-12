@@ -2,18 +2,15 @@
   "private": true,
   "scripts": {
     "dev": "vuepress dev website",
-    "build": "vuepress build website && node scripts/rss",
-    "new-post": "node scripts/scaffold.js"
+    "build": "vuepress build website"
   },
   "devDependencies": {
-    "chalk": "^2.4.1",
-    "feed": "^2.0.1",
-    "front-matter": "^2.3.0",
-    "markdown-it": "^8.4.2",
-    "prettier": "^1.14.3",
-    "vuepress": "^0.14.2"
+    "@vuepress/plugin-blog": "^1.0.0",
+    "vuepress": "^1.0.1",
+    "vuepress-theme-simple": "^0.7.0"
   },
   "dependencies": {
-    "vuepress-theme-ktquez": "^0.2.10"
+    "timeago.js": "^4.0.0-beta.2",
+    "vue-disqus": "^3.0.5"
   }
 }

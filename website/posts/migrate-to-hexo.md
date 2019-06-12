@@ -1,13 +1,8 @@
 ---
 title: 博客程序改用 Hexo
-created_at: 2017-10-09 16:27:54
-categories:
+date: 2017-10-09 16:27:54
+tags:
   - blog
-tags: []
-view: post
-layout: post
-author: gplane
-lang: en
 ---
 
 今天花了一天的时间完成了从 WordPress 到 Hexo 迁移。之前的博客一直是用 WordPress 并使用 OpenShift 的免费空间。
