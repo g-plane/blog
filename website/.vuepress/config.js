@@ -1,11 +1,12 @@
 module.exports = {
+  theme: 'simple-blog',
   themeConfig: {
     author: 'Pig Fang',
     navbar: {
       '关于我': '/about/',
       '朋友们': '/friends/',
     },
-    disqus: 'gplane-blog'
+    disqus: 'gplane-blog',
   },
   base: '/',
   title: 'Pig Fang',
@@ -14,7 +15,7 @@ module.exports = {
     ['meta', { name: 'keywords', content: 'Pig Fang, gplane, g-plane, 博客' }],
     ['meta', { name: 'author', content: 'Pig Fang' }],
   ],
-  shouldPrefetch: () => false,
+  //shouldPrefetch: () => false,
   evergreen: true,
   plugins: [
     ['@vuepress/blog', {
@@ -25,7 +26,7 @@ module.exports = {
           path: '/',
           itemPermalink: '/posts/:slug.html',
           pagination: {
-            perPagePosts: Infinity,
+            perPagePosts: 7,
           },
         },
       ],
