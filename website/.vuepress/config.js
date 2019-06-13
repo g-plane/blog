@@ -15,7 +15,7 @@ module.exports = {
     ['meta', { name: 'keywords', content: 'Pig Fang, gplane, g-plane, 博客' }],
     ['meta', { name: 'author', content: 'Pig Fang' }],
   ],
-  //shouldPrefetch: () => false,
+  shouldPrefetch: () => false,
   evergreen: true,
   plugins: [
     ['@vuepress/blog', {
