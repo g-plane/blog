@@ -7,6 +7,7 @@
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.0.0",
     "vuepress": "^1.0.1",
+    "vuepress-plugin-feed": "^0.1.6",
     "vuepress-theme-simple-blog": "^0.1.2"
   }
 }
