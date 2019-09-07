@@ -15,3 +15,4 @@ layout: Post
 - [Paji's blog](https://blog.honoka.club/) - 虽然添加的时间有点晚，但我们在 2016 年就认识了
 - [ENDsoft’s Blog](https://blog.r-ay.cn/)
 - [TimeBlog时光轴](https://imrbq.cn/)
+- [Vdrias’s Blog](https://www.vdrias.cn/)
