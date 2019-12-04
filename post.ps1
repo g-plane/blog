@@ -1,4 +1,12 @@
-$slug = $args[0]
-$title = $args[1]
+param (
+    [Parameter(Position = 0)]
+    [string]
+    $Slug,
+
+    [Parameter(Position = 1)]
+    [string]
+    $Title
+)
+
 $date = Get-Date -UFormat "%Y-%m-%d %T"
-Set-Content -Path "./website/posts/$slug.md" -Value "---`ntitle: $title`ndate: $date`ntags:`n---`n`n"
+Set-Content -Path "./website/posts/$Slug.md" -Value "---`ntitle: $Title`ndate: $date`ntags:`n---`n`n"
