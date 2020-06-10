@@ -39,25 +39,33 @@ module.exports = {
           frontmatter: { title: 'Tags' },
           itemlayout: 'Tags',
         },
-      ]
-    }],
-    ['feed', {
-      canonical_base: 'https://blog.gplane.win/',
-      feed_options: {
-        title: 'Pig Fang',
-        description: 'Pig Fang\'s blog.',
-        id: 'https://blog.gplane.win/',
-        link: 'https://blog.gplane.win/',
-        favicon: 'https://blog.gplane.win/favicon.png',
+      ],
+      globalPagination: {
+        prevText: '上一页',
+        nextText: '下一页',
       },
-      feeds: {
-        atom1: {
-          file_name: 'atom.xml',
+      comment: {
+        service: 'disqus',
+        shortname: 'gplane-blog',
+      },
+      feed: {
+        canonical_base: 'https://blog.gplane.win/',
+        feed_options: {
+          title: 'Pig Fang',
+          description: 'Pig Fang\'s blog.',
+          id: 'https://blog.gplane.win/',
+          link: 'https://blog.gplane.win/',
+          favicon: 'https://blog.gplane.win/favicon.png',
         },
+        feeds: {
+          atom1: {
+            file_name: 'atom.xml',
+          },
+        },
+        posts_directories: ['/posts/'],
+        count: Infinity,
+        sort: items => items.sort((a, b) => b.frontmatter.date - a.frontmatter.date)
       },
-      posts_directories: ['/posts/'],
-      count: Infinity,
-      sort: items => items.sort((a, b) => b.frontmatter.date - a.frontmatter.date)
-    }]
+    }],
   ],
 }
