@@ -5,8 +5,6 @@ tags:
   - TypeScript
 ---
 
-# 使用 TypeScript 模板字符串类型
-
 ## 介绍
 
 在今天的早些时候，Anders Hejlsberg 在 TypeScript 的仓库中发了一个 Pull Request：[Template string types and mapped type `as` clauses](https://github.com/microsoft/TypeScript/pull/40336)。这个特性估计会在 4.1 版本中可用。
