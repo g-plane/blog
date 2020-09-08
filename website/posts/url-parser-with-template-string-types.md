@@ -1,5 +1,5 @@
 ---
-title: 用 TypeScript 模板字符串类型来制作 URL parser
+title: 用 TypeScript 模板字面类型来制作 URL parser
 date: 2020-09-02 11:40:04
 tags:
   - TypeScript
@@ -7,7 +7,7 @@ tags:
 
 ## 想法
 
-昨天写了一些简单的基于 TypeScript 模板字符串类型的字符串操作后，看到 [@Kingwl](https://github.com/Kingwl) 做了一个 [算术（只有加和减）执行器](https://github.com/microsoft/TypeScript/pull/40336#issuecomment-684784211)，于是手有点痒，想写一个 parser。
+昨天写了一些简单的基于 TypeScript 模板字面类型的字符串操作后，看到 [@Kingwl](https://github.com/Kingwl) 做了一个 [算术（只有加和减）执行器](https://github.com/microsoft/TypeScript/pull/40336#issuecomment-684784211)，于是手有点痒，想写一个 parser。
 
 无疑写一个 JSON parser 是相对高大上的，但是很复杂（毕竟完全基于类型系统）。后来决定做一个 URL parser，这样相对简单。
 
@@ -160,6 +160,6 @@ type AST = { protocol: P } & { hostname: H } & { pathname: P }
 
 这样很难看。于是我弄了一个类型 `Merge` 将所有的内容合并到一个 object 中，使 AST 显得更直观。
 
-在整理的过程中，我还使用了与模板字符串类型一起的新特性：mapped type `as` clauses。利用这个特性，将 AST 中那些值为空字符串的属性去掉。原理是 `as` clauses 中返回 `never` 表示不包含这个属性。
+在整理的过程中，我还使用了与模板字面类型一起的新特性：mapped type `as` clauses。利用这个特性，将 AST 中那些值为空字符串的属性去掉。原理是 `as` clauses 中返回 `never` 表示不包含这个属性。
 
 全文完。

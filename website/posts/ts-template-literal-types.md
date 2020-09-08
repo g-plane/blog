@@ -1,5 +1,5 @@
 ---
-title: 使用 TypeScript 模板字符串类型
+title: 使用 TypeScript 模板字面类型
 date: 2020-09-01 18:12:39
 tags:
   - TypeScript
@@ -9,7 +9,7 @@ tags:
 
 在今天的早些时候，Anders Hejlsberg 在 TypeScript 的仓库中发了一个 Pull Request：[Template string types and mapped type `as` clauses](https://github.com/microsoft/TypeScript/pull/40336)。这个特性估计会在 4.1 版本中可用。
 
-具体给 TypeScript 带来什么新特性，我就不在这里重复说了，Anders Hejlsberg 在 PR 中介绍得很清楚。这篇文章主要讨论利用这个模板字符串类型，来对字符串字面量类型进行一些典型的字符串操作。
+具体给 TypeScript 带来什么新特性，我就不在这里重复说了，Anders Hejlsberg 在 PR 中介绍得很清楚。这篇文章主要讨论利用这个模板字面类型，来对字符串字面类型进行一些典型的字符串操作。
 
 ## 清除字符串的特定前缀
 
@@ -66,7 +66,7 @@ type ReplaceAll<Search extends string, Replace extends string, Subject extends s
 
 `ReplaceOnce` 类型和 `ReplaceAll` 类型很相似：都用到了 conditional types，而且条件还相同。不同的是条件判断通过后返回的类型不同。
 
-在上面的 conditional types 的条件中，我们对 `Subject` 字符串进行 pattern 匹配：检查字符串中是否包含 `Search` 字符串。如果包含，则还利用 `infer` 关键字将位于 `Search` 左边、右边的字符串提取出来用于返回。需要注意的是，尽管在我们的 pattern 中 `Search` 在中间，但这并不意味着 `Search` 一定要在中间才算匹配——放在开头或末尾也是可以的（放在末尾时，可能存在某些 edge cases 不能被匹配，这应该是 TypeScript 的问题），而这时候 `infer L` 或 `infer R` 推断出来的类型是一个空字符串字面量类型，即 `''` 类型。
+在上面的 conditional types 的条件中，我们对 `Subject` 字符串进行 pattern 匹配：检查字符串中是否包含 `Search` 字符串。如果包含，则还利用 `infer` 关键字将位于 `Search` 左边、右边的字符串提取出来用于返回。需要注意的是，尽管在我们的 pattern 中 `Search` 在中间，但这并不意味着 `Search` 一定要在中间才算匹配——放在开头或末尾也是可以的（放在末尾时，可能存在某些 edge cases 不能被匹配，这应该是 TypeScript 的问题），而这时候 `infer L` 或 `infer R` 推断出来的类型是一个空字符串字面类型，即 `''` 类型。
 
 如果字符串匹配我们的 pattern，则利用传入的 `Replace` 字符串代替原来的 `Search` 字符串，同时使用之前提取出来的类型 `L` 和类型 `R` 来组成新的字符串：`${L}${Replace}${R}`。
 
