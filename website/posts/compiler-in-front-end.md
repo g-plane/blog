@@ -121,17 +121,17 @@ tokenizer 会使用 [有限状态机](https://zh.wikipedia.org/wiki/有限状态
 
 语法分析器通常使用递归下降解析器来实现解析工作。（不过 parser 有很多种技术，这里不展开讨论）
 
-例如，Babel 的 parser 在解析上面的代码时，首先会遇到 `if` keyword 这个 token。（具体代码见 [https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L206-L207](https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L206-L207)）
+例如，Babel 的 parser 在解析上面的代码时，首先会遇到 `if` keyword 这个 token。（具体见 [Babel parser 对 `if` token 判断相关的代码](https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L206-L207)）
 
-此时 Babel 就知道接下来应该解析一个 if 语句，因此调用 `parseIfStatement` 方法。（具体代码见 [https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L565-L571](https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L565-L571)）
+此时 Babel 就知道接下来应该解析一个 if 语句，因此调用 `parseIfStatement` 方法。（具体代码见 [Babel 的 `parseIfStatement` 方法定义](https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L565-L571)）
 
 在 `parseIfStatement` 中，Babel 调用了 `next` 方法。这个表示将当前位置指向下一个 token，也就是完成了 `if` keyword，准备处理下一个 token。
 
-随后调用 `parseHeaderExpression` 方法。（具体代码见 [https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L460-L465](https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L460-L465)）在该方法中，首先调用 `expect(tt.parenL)`。其中 `expect` 的作用是如果当前 token 符合期望的 token，则完成当前 token 并准备处理下一个；如果不符合期望的 token，则抛出一个 parsing error，提示出现语法错误并报告解析失败。`parenL` 代表的是 `(` 这个 token。随后调用 `parseExpression` 方法，该方法将会解析一个表达式并将该表达式的 AST 返回。最后处理 `)` 符号并返回刚才得到的表达式。
+随后调用 `parseHeaderExpression` 方法。（具体代码见 [Babel 的 `parseHeaderExpression` 定义](https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-parser/src/parser/statement.js#L460-L465)）在该方法中，首先调用 `expect(tt.parenL)`。其中 `expect` 的作用是如果当前 token 符合期望的 token，则完成当前 token 并准备处理下一个；如果不符合期望的 token，则抛出一个 parsing error，提示出现语法错误并报告解析失败。`parenL` 代表的是 `(` 这个 token。随后调用 `parseExpression` 方法，该方法将会解析一个表达式并将该表达式的 AST 返回。最后处理 `)` 符号并返回刚才得到的表达式。
 
 回到 `parseIfStatement` 中，在调用 `parseHeaderExpression` 之后，如果没有语法错误，我们将得到一个表达式的 AST，此时 Babel 将此 AST 节点以 `test` 属性保存在当前正在生成的 AST 节点中。后面的操作也大概能理解了：`eat` 方法将判断下一个 token 是不是预期的 token，但与 `expect` 不同的是，它不会抛出 parsing error，只会返回一个 boolean 值。最后的 `finishNode` 调用是为了保存该 AST 节点的位置信息，并记录该 AST 节点的类型。（以上面的代码为例，即 `type` 为 `IfStatement`）
 
-我们可以在 astexplorer.net 上查看任意一段代码经过解析后生成的 AST。比如，上面的代码经过 Babel 的 parser（本文编写时，版本是 7.13.9）后可得到这样的 AST：[https://astexplorer.net/#/gist/ee2462a31b1c05debc7303973fc5b3c4/30318d58a62c2279e551ae7555d37b778a5bccc1](https://astexplorer.net/#/gist/ee2462a31b1c05debc7303973fc5b3c4/30318d58a62c2279e551ae7555d37b778a5bccc1) 。
+我们可以在 astexplorer.net 上查看任意一段代码经过解析后生成的 AST。比如，上面的代码经过 Babel 的 parser（本文编写时，版本是 7.13.9）后可得到这样的 AST：[astexplorer.net](https://astexplorer.net/#/gist/ee2462a31b1c05debc7303973fc5b3c4/30318d58a62c2279e551ae7555d37b778a5bccc1) 。
 
 这里针对生成的 AST 简单解释一下：
 
@@ -203,6 +203,6 @@ Babel 与 ESLint 在某些方面类似：它们都有插件机制，因此都会
 
 Babel 的插件负责修改 AST：插件拿到 AST 节点后，通过 Babel 提供的 API，对 AST 进行增、删、改。
 
-Babel 在执行完插件后，仍然持有一份 AST。接下来 Babel 将进行代码生成。parser 是从代码文本到 AST 的转换，而 codegen 则是从 AST 到代码文本的转换。例如，我们可以在 [https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-generator/src/generators/statements.ts#L13-L43](https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-generator/src/generators/statements.ts#L13-L43) 这里来了解 Babel 是如何将 AST 中 `IfStatement` 转换成文本的。
+Babel 在执行完插件后，仍然持有一份 AST。接下来 Babel 将进行代码生成。parser 是从代码文本到 AST 的转换，而 codegen 则是从 AST 到代码文本的转换。例如，我们可以在 [这里](https://github.com/babel/babel/blob/b97a627964a832aac84f0fe9f7be560dce2b60f1/packages/babel-generator/src/generators/statements.ts#L13-L43) 来了解 Babel 是如何将 AST 中 `IfStatement` 转换成文本的。
 
 关于 Babel 插件的开发，Babel 官方文档有非常简单的示例：[https://babel.dev/docs/en/plugins#plugin-development](https://babel.dev/docs/en/plugins#plugin-development) 。
