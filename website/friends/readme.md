@@ -11,9 +11,10 @@ layout: Post
 
 - [哈陆lu](https://halu.lu/)
 - [DreamCity](https://www.littleqiu.net/) - 是 [LittleSkin](https://littleskin.cn) 的站长
-- [Blessing Studio](https://blessing.studio/) - 是开源项目 [Blessing Skin](https://github.com/printempw/blessing-skin-server) 的作者
+- [PRIN BLOG](https://printempw.github.io/) - 是开源项目 [Blessing Skin](https://github.com/printempw/blessing-skin-server) 的作者
 - [Paji's blog](https://blog.mntpaji.com/) - 虽然添加的时间有点晚，但我们在 2016 年就认识了
 - [ENDsoft’s Blog](https://blog.r-ay.cn/)
 - [TimeBlog时光轴](https://imrbq.cn/)
-- [Vdrias’s Blog](https://www.vdrias.cn/)
+- [Mashirl’s Blog](https://www.mashirl.com/)
 - [Yifans_Z](https://zyf.im/)
+- [Restent Blog](https://blog.restent.win)
