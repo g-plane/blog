@@ -25,9 +25,6 @@ module.exports = {
           dirname: 'posts',
           path: '/',
           itemPermalink: '/posts/:slug.html',
-          pagination: {
-            perPagePosts: 7,
-          },
         },
       ],
       frontmatters: [
@@ -43,6 +40,7 @@ module.exports = {
       globalPagination: {
         prevText: '上一页',
         nextText: '下一页',
+        lengthPerPage: 6,
       },
       comment: {
         service: 'disqus',
