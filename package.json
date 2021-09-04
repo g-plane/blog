@@ -7,6 +7,6 @@
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.9.4",
     "vuepress": "^1.8.2",
-    "vuepress-theme-simple-blog": "^0.5.1"
+    "vuepress-theme-simple-blog": "^1.0.0"
   }
 }
