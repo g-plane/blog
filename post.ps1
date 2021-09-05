@@ -1,5 +1,5 @@
 param (
-    [Parameter(Position = 0)]
+    [Parameter(Position = 0, Mandatory)]
     [string]
     $Slug,
 
