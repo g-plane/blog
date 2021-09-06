@@ -5,6 +5,8 @@ tags:
   - TypeScript
 ---
 
+> This post is for testing my hugely updated blog theme.
+
 ## Prerequisites
 
 You're required to know TypeScript types, such as some built-in types like `Extract` and `Omit`.
