@@ -1,4 +1,7 @@
-node_modules
+.DS_Store
+Thumbs.db
+db.json
 *.log
-website/.vuepress/dist
-yarn.lock
+node_modules/
+public/
+.deploy*/

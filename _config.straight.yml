@@ -1,0 +1,13 @@
+copyright_date: 2016-2021
+
+nav_links:
+  - text: About Me
+    link: /about
+  - text: Friends
+    link: /friends
+
+favicon: images/favicon.webp
+
+disqus:
+  enable: true
+  short_name: gplane-blog

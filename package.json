@@ -1,12 +1,25 @@
 {
+  "name": "gplane-blog",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vuepress dev website",
-    "build": "vuepress build website"
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "serve": "hexo server"
   },
-  "devDependencies": {
-    "@vuepress/plugin-blog": "^1.9.4",
-    "vuepress": "^1.8.2",
-    "vuepress-theme-simple-blog": "^1.1.0"
+  "hexo": {
+    "version": "5.4.0"
+  },
+  "dependencies": {
+    "hexo": "^5.0.0",
+    "hexo-clean-css": "^2.0.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-html-minifier": "^1.0.0",
+    "hexo-renderer-less": "^2.0.2",
+    "hexo-renderer-markdown-it": "^5.0.0",
+    "hexo-server": "^2.0.0",
+    "hexo-theme-straight": "^1.0.0"
   }
 }

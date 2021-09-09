@@ -1,6 +1,7 @@
 ---
 title: Type-safe Way to Build a Parser
 date: 2021-09-05 11:48:57
+description: Type-safe way for building a parser with the power of TypeScript type system.
 tags:
   - TypeScript
 ---
@@ -25,7 +26,7 @@ Here, we take some code from Babel as example. Babel is written in [Flow](https:
 
 Let's see [how Babel parses `IfStatement`](https://github.com/babel/babel/blob/c25ec3e06964b06d8207712d54f7c78e621071cd/packages/babel-parser/src/parser/statement.js#L648). I'll show you the code without implementation detail:
 
-```ts
+```typescript
 parseIfStatement(node: N.IfStatement): N.IfStatement {
   this.next();
   node.test = // call another method to parse something else
