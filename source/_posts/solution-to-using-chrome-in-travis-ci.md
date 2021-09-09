@@ -1,9 +1,10 @@
 ---
 title: 解决 Travis CI 中 Chrome 找不到的办法
+description: CI 的环境是非常苛刻的。
+date: 2017-05-07 11:25:01
 tags:
   - JavaScript
   - 前端
-date: 2017-05-07 11:25:01
 ---
 
 ## 前言
@@ -60,4 +61,4 @@ customLaunchers: {
 
 参考来源：
 
-[解决 travis ci 中 chrome 找不到的办法](https://juejin.im/entry/58d4abf0b123db3f6b632f3a)
+- [解决 travis ci 中 chrome 找不到的办法](https://juejin.im/entry/58d4abf0b123db3f6b632f3a)

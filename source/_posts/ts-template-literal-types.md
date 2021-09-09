@@ -1,5 +1,6 @@
 ---
 title: 使用 TypeScript 模板字面类型
+description: 又一个新的 TypeScript 类型魔法。
 date: 2020-09-01 18:12:39
 tags:
   - TypeScript

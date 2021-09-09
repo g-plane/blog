@@ -1,5 +1,6 @@
 ---
 title: 解决安装 Manjaro 提示设备问题
+description: 安装 Manjaro 时遇到的一个坑。
 date: 2018-07-10 14:36:53
 tags:
   - Linux
@@ -13,7 +14,7 @@ tags:
 
 ISO 是不可能有问题的，因为我校对过 SHA1。U 盘按理也是没问题的。
 
-后来去搜索，发现这的确跟启动盘有关，但不一定是介质问题。我在[这里](https://forum.manjaro.org/t/cannot-boot-into-live-usb/19193)看到了一些可能的解决方法。
+后来去搜索，发现这的确跟启动盘有关，但不一定是介质问题。我在 [这里](https://forum.manjaro.org/t/cannot-boot-into-live-usb/19193) 看到了一些可能的解决方法。
 
 其中有一个是 `cd` 进 U 盘设备，大概是 `cd dev/disk/by-label` 然后 `ls` 找出设备。这是按卷标来查找设备。
 

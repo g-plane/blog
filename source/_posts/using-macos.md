@@ -1,5 +1,6 @@
 ---
 title: 使用 macOS 一个月以来的一些感受
+description: 尝试使用 macOS。
 date: 2018-02-10 09:57:59
 tags:
   - macOS
@@ -17,11 +18,9 @@ tags:
 
 好看是最重要的！Visual Studio Code 在 Windows、Linux、macOS 三个系统下的外观表现，Windows 下是最差的，而 macOS 下是最漂亮的。可惜了，我只能使用比较渣的二手显示器，所以显示器成为了显示效果的瓶颈。
 
-[![屏幕快照 2018-02-10 上午9.55.20.png](https://i.loli.net/2018/02/10/5a7e511f8ecb0.png)](https://i.loli.net/2018/02/10/5a7e511f8ecb0.png)
+![屏幕快照 2018-02-10 上午9.55.20.png](https://i.loli.net/2018/02/10/5a7e511f8ecb0.png)
 
-::: info
-这个 VS Code 的主题是 Palenight Theme。（需要先安装 Material Palenight Theme 扩展）
-:::
+> 这个 VS Code 的主题是 Palenight Theme。（需要先安装 Material Palenight Theme 扩展）
 
 macOS 还有一个我一直羡慕的功能是截图带阴影，看看上面的图片就知道了。（不过我不知道最终在博客的页面能不能很好的表现）
 
@@ -29,11 +28,11 @@ macOS 还有一个我一直羡慕的功能是截图带阴影，看看上面的�
 
 视频播放器必然是选择 [IINA](https://github.com/lhc70000/iina)，它基于 mpv 制作而来，开源在 GitHub，我已 star。
 
-[![屏幕快照 2018-02-10 上午10.33.38.png](https://i.loli.net/2018/02/10/5a7e5a324f125.png)](https://i.loli.net/2018/02/10/5a7e5a324f125.png)
+![屏幕快照 2018-02-10 上午10.33.38.png](https://i.loli.net/2018/02/10/5a7e5a324f125.png)
 
 它的整个播放界面也很干净：
 
-[![屏幕快照 2018-02-10 上午10.42.37.png](https://i.loli.net/2018/02/10/5a7e5c989063b.png)](https://i.loli.net/2018/02/10/5a7e5c989063b.png)
+![屏幕快照 2018-02-10 上午10.42.37.png](https://i.loli.net/2018/02/10/5a7e5c989063b.png)
 
 至于音乐播放器，如果是播放网络的那肯定是网易云音乐，然而网易云音乐 macOS 版客户端不能直接播放本地的音乐文件，也不能更改下载保存目录，所以播放本地肯定不能用它。
 
@@ -53,7 +52,7 @@ macOS 本身是没有包管理器的，安装 Homebrew 就行。
 
 由于习惯了 Windows 下的那套操作，在 macOS 下多多少少有些不适应。举个例子，Finder 中对着一个文件右键弹出的菜单长这样：
 
-[![屏幕快照 2018-02-10 上午11.06.47.png](https://i.loli.net/2018/02/10/5a7e61efb0037.png)](https://i.loli.net/2018/02/10/5a7e61efb0037.png)
+![屏幕快照 2018-02-10 上午11.06.47.png](https://i.loli.net/2018/02/10/5a7e61efb0037.png)
 
 Windows 下的「属性」在这里是 「显示简介」；「复制」并不像 Windows 那样复制到剪贴板，而是直接在原地（即当前目录）做个副本，如果想复制到剪贴板，那应该选择「拷贝“…”」。还有，没有「剪切」吗？
 

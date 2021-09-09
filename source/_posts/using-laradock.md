@@ -1,8 +1,10 @@
 ---
 title: 使用 Laradock 进行 Laravel 应用开发
+description: Laradock 其实是利用 Docker Compose 和 Docker 而成的。
 date: 2018-01-08 10:59:20
 tags:
   - PHP
+  - Laravel
 ---
 
 ## Laradock?

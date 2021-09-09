@@ -1,5 +1,6 @@
 ---
 title: 用 RxJS 编写优雅代码
+description: 当然这个玩得有点过火了。
 date: 2019-12-04 17:30:50
 tags:
   - JavaScript
@@ -191,40 +192,11 @@ const color$ = fromEvent(picker, 'click').pipe(
 
 用户每一次单击 `picker` 都将触发事件，因此实际上管道中「流动」的是每次单击后产生的颜色名：
 
-<svg version="1.1" id="diagram1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="600px" height="150px" viewBox="0 0 800 150" enable-background="new 0 0 800 150" xml:space="preserve">
-<g>
-	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.887" y1="72.916" x2="786.449" y2="72.916"/>
-	<polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="764.76,45.717 786.449,72.917 764.76,100.117 	"/>
-</g>
-<g>
-	<path fill="#20C997" d="M148.279,72.917c0,10.868-8.811,19.68-19.68,19.68H81.56c-10.868,0-19.68-8.813-19.68-19.68l0,0
-		c0-10.869,8.813-19.68,19.68-19.68h47.04C139.469,53.238,148.279,62.048,148.279,72.917L148.279,72.917z"/>
-</g>
-<text transform="matrix(1 0 0 1 83.4775 79.8721)" fill="#FFFFFF" font-family="'MicrosoftYaHeiLight'" font-size="20.16">cyan</text>
-<g>
-	<path fill="#6610F2" d="M298.04,72.917c0,10.868-8.811,19.68-19.68,19.68h-47.04c-10.867,0-19.68-8.813-19.68-19.68l0,0
-		c0-10.869,8.813-19.68,19.68-19.68h47.04C289.229,53.238,298.04,62.048,298.04,72.917L298.04,72.917z"/>
-</g>
-<text transform="matrix(1 0 0 1 227.2441 79.873)" fill="#FFFFFF" font-family="'MicrosoftYaHeiLight'" font-size="20.16">indigo</text>
-<g>
-	<path fill="#F012BE" d="M445.399,72.917c0,10.868-8.813,19.68-19.682,19.68H378.68c-10.868,0-19.68-8.813-19.68-19.68l0,0
-		c0-10.869,8.813-19.68,19.68-19.68h47.038C436.587,53.238,445.399,62.048,445.399,72.917L445.399,72.917z"/>
-</g>
-<text transform="matrix(1 0 0 1 367.8853 79.873)" fill="#FFFFFF" font-family="'MicrosoftYaHeiLight'" font-size="20.16">fuchsia</text>
-<g>
-	<path fill="#D81B60" d="M589.399,72.917c0,10.868-8.814,19.68-19.682,19.68h-47.042c-10.867,0-19.676-8.813-19.676-19.68l0,0
-		c0-10.869,8.809-19.68,19.676-19.68h47.042C580.585,53.238,589.399,62.048,589.399,72.917L589.399,72.917z"/>
-</g>
-<text transform="matrix(1 0 0 1 509.002 79.873)" fill="#FFFFFF" font-family="'MicrosoftYaHeiLight'" font-size="20.16">maroon</text>
-<g>
-	<path fill="#20C997" d="M727.64,72.917c0,10.868-8.814,19.68-19.683,19.68h-47.041c-10.867,0-19.677-8.813-19.677-19.68l0,0
-		c0-10.869,8.81-19.68,19.677-19.68h47.041C718.825,53.238,727.64,62.048,727.64,72.917L727.64,72.917z"/>
-</g>
-<text transform="matrix(1 0 0 1 670.2822 79.873)" fill="#FFFFFF" font-family="'MicrosoftYaHeiLight'" font-size="20.16">teal</text>
-</svg>
+```
+cyan -> indigo -> fuchsia -> maroon -> teal
+```
 
-如上图所示，假设第一次单击是 cyan，如果第二次单击选择的是 indigo，就要删除 `navbar-cyan` 然后添加 `navbar-indigo`，依此类推。
+如上所示，假设第一次单击是 cyan，如果第二次单击选择的是 indigo，就要删除 `navbar-cyan` 然后添加 `navbar-indigo`，依此类推。
 
 那么有没有什么操作符可以记录流中的上一次数据呢？答案是肯定的。由于这里我们只需要知道上一次的数据和当前这一次数据，因此我们可以用 `pairwise` 操作符。这个操作符不接收任何参数，返回的是一个二元组。
 
@@ -246,7 +218,7 @@ color$.pipe(pairwise())
 
 以前面的图为例，应用 `pairwise` 操作符后，将输出：
 
-```
+```javascript
 ['cyan', 'indigo']
 ['indigo', 'fuchsia']
 ['fuchsia', 'maroon']

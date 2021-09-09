@@ -1,8 +1,9 @@
 ---
 title: 在 Minecraft 中实现高度自动化的铁路系统
+description: 一点点 Minecraft 铁路研究。
+date: 2018-10-14 10:47:25
 tags:
   - minecraft
-date: 2018-10-14 10:47:25
 ---
 
 ## 概述

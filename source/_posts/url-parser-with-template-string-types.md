@@ -1,5 +1,6 @@
 ---
 title: 用 TypeScript 模板字面类型来制作 URL parser
+description: 什么？一个完全基于类型的 URL parser？
 date: 2020-09-02 11:40:04
 tags:
   - TypeScript

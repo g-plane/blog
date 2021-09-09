@@ -1,5 +1,6 @@
 ---
 title: 为 Blessing Skin 写测试
+description: 给 Blessing Skin 写前端和后端测试可真不简单。
 date: 2017-11-25 19:21:52
 tags:
   - JavaScript

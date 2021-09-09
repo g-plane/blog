@@ -1,8 +1,9 @@
 ---
 title:  巧用 TypeScript 的「条件类型」
+description: 给一个库提 Pull request 时所想到的点子。
+date: 2018-11-10 18:55:11
 tags:
   - TypeScript
-date: 2018-11-10 18:55:11
 ---
 
 ## 约定

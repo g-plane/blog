@@ -1,5 +1,6 @@
 ---
 title: 再见 Hexo，你好 Nuxt.js
+description: 从 Hexo 到 Nuxt.js。
 date: 2018-05-10 17:30:53
 tags:
   - blog
@@ -105,11 +106,7 @@ Gatsby 给我的感觉是太复杂了，而且我不太了解 React 生态下的
 
 ### 工作原理
 
-::: info
-
-你可以直接阅读 [`modules`](https://github.com/g-plane/blog/tree/master/modules) 目录下的源码
-
-:::
+你可以直接阅读 [`modules`](https://github.com/g-plane/blog/tree/master/modules) 目录下的源码。
 
 #### 时机
 

@@ -1,5 +1,6 @@
 ---
 title: 在 Karma + webpack 中生成 source map
+description: 为了更好地输出错误信息而折腾了好久。
 date: 2018-02-14 16:42:29
 tags:
   - JavaScript
@@ -12,13 +13,13 @@ tags:
 
 然而网上大多数教程和文章都是说安装 `karma-sourcemap-loader`，然后在 `karma.conf.js` 中 `preprocessors` 这项中添加 `sourcemap`，并在 webpack 的配置中使用 `devtool: 'inline-source-map'`。我按这种方法试了好几次，后来还按照其它的一些指导在 webpack 的配置中添加一个插件 `webpack.SourceMapDevToolPlugin`，都没有好结果。
 
-[![屏幕快照 2018-02-14 下午5.30.26.png](https://i.loli.net/2018/02/14/5a8401bb85115.png)](https://i.loli.net/2018/02/14/5a8401bb85115.png)
+![屏幕快照 2018-02-14 下午5.30.26.png](https://i.loli.net/2018/02/14/5a8401bb85115.png)
 
 你让我怎么在 bundle 后的文件中的第六万行里去找错误？
 
 ## 解决
 
-后来我在 google 中搜索有没有解决办法。我在 `karma-webpack` 的一个 issue 中看到了一个人的回复，说建议用 `karma-source-map-support` 这个包。
+后来我在 Google 中搜索有没有解决办法。我在 `karma-webpack` 的一个 issue 中看到了一个人的回复，说建议用 `karma-source-map-support` 这个包。
 
 那首先当然是安装它了：
 
@@ -65,6 +66,6 @@ module.exports = function(config) {
 
 配置正确后就能成功得到 source map，顺而也就方便定位测试出错的地方。
 
-[![屏幕快照 2018-02-14 下午5.53.57.png](https://i.loli.net/2018/02/14/5a84073e30649.png)](https://i.loli.net/2018/02/14/5a84073e30649.png)
+![屏幕快照 2018-02-14 下午5.53.57.png](https://i.loli.net/2018/02/14/5a84073e30649.png)
 
 以上。

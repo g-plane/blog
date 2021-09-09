@@ -1,5 +1,6 @@
 ---
 title: 关于 yarn.lock 和 package-lock.json
+description: 这些「锁」都有什么作用？
 date: 2018-06-22 22:46:16
 tags:
   - JavaScript
@@ -120,11 +121,8 @@ npm 5 的初期，曾因为 `package-lock.json` 和 `package.json` 一些矛盾�
 ```
 
 1. 它不像 Yarn 记录了语义化版本，而是直接记录了确切版本。
-
 2. `resolved` 字段仅仅记录了 URL，而 hash 值用另一个字段 `integrity` 来记录（Yarn 记录在 URL 中的 hash 部分）
-
 3. npm 用的是包中的 `integrity` 字段。（详见 [npm 文档](https://docs.npmjs.com/files/package-lock.json#integrity)）
-
 4. `dev` 字段记录此依赖是否为开发依赖（即 `devDependencies`）
 
 ### 提升

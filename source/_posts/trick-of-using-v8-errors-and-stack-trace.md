@@ -1,5 +1,6 @@
 ---
 title: V8 的 Error 对象与栈追踪的妙用
+description: 我完全没想到 Error 还可以这么用。
 date: 2018-03-09 15:42:21
 tags:
   - JavaScript
@@ -22,11 +23,11 @@ tags:
 
 下面这张图是直接用 Node.js 运行一个脚本的结果：
 
-[![屏幕快照 2018-03-09 下午5.01.01.png](https://i.loli.net/2018/03/09/5aa25ad243e4f.png)](https://i.loli.net/2018/03/09/5aa25ad243e4f.png)
+![屏幕快照 2018-03-09 下午5.01.01.png](https://i.loli.net/2018/03/09/5aa25ad243e4f.png)
 
 下面这张图是在 Jest 中执行一段代码的结果：
 
-[![屏幕快照 2018-03-09 下午5.02.05.png](https://i.loli.net/2018/03/09/5aa25ad240529.png)](https://i.loli.net/2018/03/09/5aa25ad240529.png)
+![屏幕快照 2018-03-09 下午5.02.05.png](https://i.loli.net/2018/03/09/5aa25ad240529.png)
 
 原因是，
 
@@ -106,10 +107,10 @@ error.stack = stack.join('\n')
 
 现在就可以得到友好的错误栈信息了：
 
-[![屏幕快照 2018-03-09 下午5.55.18.png](https://i.loli.net/2018/03/09/5aa25ad248874.png)](https://i.loli.net/2018/03/09/5aa25ad248874.png)
+![屏幕快照 2018-03-09 下午5.55.18.png](https://i.loli.net/2018/03/09/5aa25ad248874.png)
 
 配合 Jest 就能更好地定位问题所在之处：
 
-[![屏幕快照 2018-03-09 下午5.56.06.png](https://i.loli.net/2018/03/09/5aa25ad246b55.png)](https://i.loli.net/2018/03/09/5aa25ad246b55.png)
+![屏幕快照 2018-03-09 下午5.56.06.png](https://i.loli.net/2018/03/09/5aa25ad246b55.png)
 
 以上。

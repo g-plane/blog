@@ -1,8 +1,9 @@
 ---
 title: 在 Fedora 25 中安装 NVIDIA 驱动
+description: 在 Linux 里安装 NVIDIA 驱动真是一件麻烦的事……
+date: 2016-12-25 10:33:00
 tags:
   - Linux
-date: 2016-12-25 10:33:00
 ---
 
 此篇文章根据 [https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/](https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/) 而来。

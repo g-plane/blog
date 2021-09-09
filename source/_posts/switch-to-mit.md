@@ -1,5 +1,6 @@
 ---
 title: 转向 MIT
+description: 从 Apache License 2.0 到 MIT。
 date: 2018-06-27 23:06:50
 tags:
   - 开源

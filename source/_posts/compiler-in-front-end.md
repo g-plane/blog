@@ -1,8 +1,9 @@
 ---
 title: 前端也要谈编译原理！
+description: 你知道 Babel 和 ESLint 背后的工作原理吗？
+date: 2021-03-17 17:31:11
 tags:
   - 编译原理
-date: 2021-03-17 17:31:11
 ---
 
 Babel、ESLint 以及 webpack 等工具虽然用途不同，但这些工具的基本工作流程都是读取源代码，然后对其分析、处理。这篇文章将会简单地讨论编译原理，以及介绍 JavaScript 中的 AST，最后大致介绍 ESLint 和 Babel 的原理。

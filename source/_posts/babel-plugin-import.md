@@ -1,12 +1,13 @@
 ---
 title: babel-plugin-import 踩坑记录
+description: 又是一次踩坑。
 date: 2019-05-07 19:19:34
 tags:
   - JavaScript
   - 前端
 ---
 
-严格来说这并不是一篇博文——只是踩坑记录。
+> 严格来说这并不是一篇博文——只是踩坑记录。
 
 ## 问题
 

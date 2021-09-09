@@ -1,8 +1,9 @@
 ---
 title: 谈谈《来自风平浪静的明天》
+description: 第一次写 ACG 方面的杂谈。
+date: 2018-10-05 10:15:03
 tags:
   - ACG
-date: 2018-10-05 10:15:03
 ---
 
 > 这篇博文纯属水文一篇，如果写得不好请见谅
@@ -62,7 +63,5 @@ date: 2018-10-05 10:15:03
 
 ![Nagi no Asukara 2013 - Non-telop Opening 3 [BD 1920x1080 23.976fps AVC-yuv444p10 FLAC] - mawen1250.mkv_snapshot_00.59_[2018.10.06_10.16.04].png](https://i.loli.net/2018/10/06/5bb821ed252c2.png)
 ![Nagi no Asukara 2013 - Non-telop Opening 3 [BD 1920x1080 23.976fps AVC-yuv444p10 FLAC] - mawen1250.mkv_snapshot_01.00_[2018.10.06_10.16.16].png](https://i.loli.net/2018/10/06/5bb821ef88e7a.png)
-
----
 
 全文结束。

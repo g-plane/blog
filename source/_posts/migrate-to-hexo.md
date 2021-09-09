@@ -1,5 +1,6 @@
 ---
 title: 博客程序改用 Hexo
+description: 从 WordPress 到 Hexo。
 date: 2017-10-09 16:27:54
 tags:
   - blog
