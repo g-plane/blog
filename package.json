@@ -20,6 +20,6 @@
     "hexo-renderer-less": "^2.0.2",
     "hexo-renderer-markdown-it": "^5.0.0",
     "hexo-server": "^2.0.0",
-    "hexo-theme-straight": "^1.0.0"
+    "hexo-theme-straight": "^1.1.0"
   }
 }
