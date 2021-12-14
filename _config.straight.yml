@@ -4,7 +4,7 @@ nav_links:
   - text: About Me
     link: /about
   - text: Friends
-    link: /friends
+    link: /friends.html
 
 favicon: images/favicon.webp
 
