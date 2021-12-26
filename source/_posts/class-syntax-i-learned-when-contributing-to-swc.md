@@ -94,7 +94,7 @@ a
 b
 ```
 
-We already know it's referencing two variables at different lines,
+We already know it's referring two variables at different lines,
 which is equivalent to:
 
 ```javascript
