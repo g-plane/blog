@@ -1,6 +1,7 @@
 ---
 title: 在浏览器里跑 C 语言写的程序？可行是可行……
 date: 2022-01-19 22:55:20
+description: 折腾 WebAssembly 的坑不是一般的多。
 tags:
   - WebAssembly
 ---
