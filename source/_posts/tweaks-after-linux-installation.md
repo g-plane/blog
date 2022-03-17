@@ -19,7 +19,7 @@ tags:
 
 ## AX200/AX201 网卡的速度较慢
 
-这个问题在当时调试了很长时间。不过这也与我的测试方法不太恰当有关系——我当时是用 [speedtest.net](https://www.speedtest.net/) 并连接同一城市、同一运营商的节点去测试的。当时的测试结果是 Windows 下能达到近满速，而 Linux 下不能。后来是按照 「@yushijinhun](https://yushi.moe/) 的建议使用 iperf3 去测速。
+这个问题在当时调试了很长时间。不过这也与我的测试方法不太恰当有关系——我当时是用 [speedtest.net](https://www.speedtest.net/) 并连接同一城市、同一运营商的节点去测试的。当时的测试结果是 Windows 下能达到近满速，而 Linux 下不能。后来是按照 [@yushijinhun](https://yushi.moe/) 的建议使用 iperf3 去测速。
 
 要修复速度较慢这个问题，先创建一个文本文件 `/etc/modprobe.d/iwlwifi.conf`，并输入以下内容：
 
