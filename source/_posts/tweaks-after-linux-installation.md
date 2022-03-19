@@ -34,3 +34,13 @@ options 11n_disable=1 power_save=0
 ## Haruna 播放器无法运行
 
 虽然 Arch CN 仓库里的 `haruna` 包没有声明，但它其实是依赖于 `ffmpeg4.4` 这个包的。不然的话打开软件会出现闪退；在命令行里运行则会看到它提示 `libavutil.so` 文件缺失。
+
+## 无法运行 Minecraft
+
+启用 Minecraft 实例的时候出现错误：
+
+```
+No OpenGL context found in the current thread.
+```
+
+这时只需要安装 `xorg-xrandr` 这个包即可。
