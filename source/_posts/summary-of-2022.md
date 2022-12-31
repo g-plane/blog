@@ -37,7 +37,7 @@ tags:
 新增完成了 [bangumi](https://bgm.tv/anime/list/468610/collect) 上 92 条动画条目。有趣的是，今年完成的第一部补番是《来自深渊》（第一季），最后一部完成的补番也是《来自深渊》（第二季）。
 
 个人认为年度最好看的动画是《ぼっち・ざ・ろっく！》。
-我购买了它的 OP 单曲实体 CD，而这张 CD 也成了我第一张购买的 CD。（实现了用家里的 CD 播放机播放 Anisong CD 的梦想）另外还购买了它的另一张专辑，只是还没到货。
+我购买了它的 OP 单曲实体 CD《青春コンプレックス》，而这张 CD 也成了我第一张购买的 CD。（实现了用家里的 CD 播放机播放 Anisong CD 的梦想）另外还购买了它的另一张专辑《結束バンド》，只是还没到货。
 前面提到的那部平板，我就是为了更方便、舒服地补它的原作漫画才买的。（但在几个月之前就有用平板去补《街角魔族》原作的想法了）
 
 由于有了配置还不错的电脑，我开始玩 Minecraft 整合包了。一开始玩的是 [All the Mods 3: Lite](https://www.curseforge.com/minecraft/modpacks/atm-3-lite)，后来里面的存档损坏，不能继续玩了，于是干脆玩 [All the Mods 3](https://www.curseforge.com/minecraft/modpacks/all-the-mods-3) 并开了个新存档。
