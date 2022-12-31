@@ -8,7 +8,7 @@ tags:
 
 不知不觉，又一年过去了。一年里发生的事，就像在昨天一样。总的来说，今年的收获还是有不少的。
 
-> 2017 的总结在 [这里](https://blog.gplane.win/posts/summary-of-2017.html)
+> 2017 的总结在 [这里](./summary-of-2017.html)
 
 ## GitHub 活动 & Coding
 
@@ -36,7 +36,7 @@ tags:
 
 下面列出了我在 2018 年里创建的 npm 包：
 
-- [rize](https://www.npmjs.com/package/rize) - *稍后会有介绍。*
+- [rize](https://www.npmjs.com/package/rize) - _稍后会有介绍。_
 - [eslint-formatter-beauty](https://www.npmjs.com/package/eslint-formatter-beauty) - 一个好看的 ESLint 输出 formatter，类似于 ESLint 自带的 codeframe formatter，但更美观。
 - [tslint-formatter-beauty](https://www.npmjs.com/package/tslint-formatter-beauty) - 与 `eslint-formatter-beauty` 相同，但适用于 TSLint。
 - [generator-tsm](https://www.npmjs.com/package/generator-tsm) - 可快速生成基于 TypeScript 的 npm 包的 Yeoman generator，不过最近很少使用。
@@ -56,7 +56,7 @@ tags:
 
 数了一下，居然有 17 个。
 
-这里补充介绍一下 [rize](https://www.npmjs.com/package/rize) 这个 npm 包。它是我于今年 2 月的时候创建的，当时做这个主要是想给 *曾经* 的 Blessing Skin v4 进行集成测试。虽然 `puppeteer` 的出现极大地简化了 Headless Chrome 的使用，但是它的 API 使用起来还是有点啰嗦和麻烦，同时看到 Laravel Dusk 那优雅的 API 设计，于是我借鉴了 Laravel Dusk 的 API 设计同时加入我自己的想法，随后创建了这个工具。截至 2018 年 12 月 31 日，[rize](https://github.com/g-plane/rize) 已获得 79 个 stars。虽然到了后面，曾经的 Blessing Skin v4 因为在改动上过于激进导致向前兼容太难做，还没完成就已经被我废弃了（实际上源码已经被我删除），以至于后来以相对更渐进的方式来更新 Blessing Skin 的技术栈，[rize](https://github.com/g-plane/rize) 也因此没有被用于 Blessing Skin v4 的测试中。因为当初创建 [rize](https://github.com/g-plane/rize) 是为了给 Blessing Skin v4 添加集成测试，因此它的定位是测试。
+这里补充介绍一下 [rize](https://www.npmjs.com/package/rize) 这个 npm 包。它是我于今年 2 月的时候创建的，当时做这个主要是想给 _曾经_ 的 Blessing Skin v4 进行集成测试。虽然 `puppeteer` 的出现极大地简化了 Headless Chrome 的使用，但是它的 API 使用起来还是有点啰嗦和麻烦，同时看到 Laravel Dusk 那优雅的 API 设计，于是我借鉴了 Laravel Dusk 的 API 设计同时加入我自己的想法，随后创建了这个工具。截至 2018 年 12 月 31 日，[rize](https://github.com/g-plane/rize) 已获得 79 个 stars。虽然到了后面，曾经的 Blessing Skin v4 因为在改动上过于激进导致向前兼容太难做，还没完成就已经被我废弃了（实际上源码已经被我删除），以至于后来以相对更渐进的方式来更新 Blessing Skin 的技术栈，[rize](https://github.com/g-plane/rize) 也因此没有被用于 Blessing Skin v4 的测试中。因为当初创建 [rize](https://github.com/g-plane/rize) 是为了给 Blessing Skin v4 添加集成测试，因此它的定位是测试。
 
 [这里](https://blog.gplane.win/posts/introducing-rize.html) 有一篇关于 [rize](https://github.com/g-plane/rize) 博客文章。
 
@@ -107,16 +107,16 @@ GitHub 仓库在 [这里](https://github.com/g-plane/vscode-beefweb)，里面有
 - 《HELLO!! 黄金拼图》
 - 《紫罗兰永恒花园》
 - 《POP TEAM EPIC》
-- 《此花亭奇谭》*（值得一看）*
+- 《此花亭奇谭》_（值得一看）_
 - 《食戟之灵》
 - 《樱花庄的宠物女孩》
-- 《冰菓》*（强烈推荐，而且其 ED《まどろみの約束》是我目前最喜欢的动漫歌曲，没有「之一」）*
-- 《结城友奈是勇者》*（我只看了「友奈之章」和「勇者之章」）*
-- 《来自风平浪静的明天》*（强烈推荐）*
+- 《冰菓》_（强烈推荐，而且其 ED《まどろみの約束》是我目前最喜欢的动漫歌曲，没有「之一」）_
+- 《结城友奈是勇者》_（我只看了「友奈之章」和「勇者之章」）_
+- 《来自风平浪静的明天》_（强烈推荐）_
 - 《龙王的工作》
 - 《我女友与青梅竹马的惨烈修罗场》
-- 《悠哉日常大王》和《悠哉日常大王 Repeat》*（值得一看）*
-- 《齐木楠雄的灾难》*（第二季我还没看）*
+- 《悠哉日常大王》和《悠哉日常大王 Repeat》_（值得一看）_
+- 《齐木楠雄的灾难》_（第二季我还没看）_
 - 《我家女仆有够烦》
 
 这些都是 TV 动画。在暑假的时候我下载并观看了一部剧场动画，是《玻璃之花与崩坏的世界》（没错，又是横山克，又是种田梨沙 + 佐仓绫音，又是 A-1 Pictures）。
@@ -143,7 +143,7 @@ GitHub 仓库在 [这里](https://github.com/g-plane/vscode-beefweb)，里面有
 
 明年应该多了解跟工作、就业有关的东西了，尽管现在还是大三。
 
-*可能还有别的，但暂时想不出。*
+_可能还有别的，但暂时想不出。_
 
 ---
 

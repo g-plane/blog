@@ -4,7 +4,7 @@ title: 关于 Pig Fang
 
 # 关于我
 
-> 这是第二版。第一版在 [这里](./edition-1.md)。
+> 这是第二版。第一版在 [这里](./edition-1.html)。
 
 我常用的 ID 是 `gplane` 或 `GPlane`，有时候你可能看到带「`-`」的版本，也就是 `g-plane`，例如我的 GitHub。有些地方会使用 `Pig Fang` 这个名字。
 
