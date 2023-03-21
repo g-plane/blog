@@ -13,7 +13,7 @@ title: 我的小伙伴们
 - [PRIN BLOG](https://printempw.github.io/) - 是开源项目 [Blessing Skin](https://github.com/printempw/blessing-skin-server) 的作者
 - [Paji's blog](https://blog.mntpaji.com/) - 虽然添加的时间有点晚，但我们在 2016 年就认识了
 - [ENDsoft’s Blog](https://blog.r-ay.cn/)
-- [TimeBlog时光轴](https://imrbq.cn/)
+- [时光的时光轴](https://outti.me/)
 - [Mashirl’s Blog](https://www.mashirl.com/)
 - [Yifans_Z](https://zyf.im/)
 - [Restent Blog](https://blog.restent.win)
