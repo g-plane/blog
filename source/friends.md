@@ -16,4 +16,4 @@ title: 我的小伙伴们
 - [时光的时光轴](https://outti.me/)
 - [Mashirl’s Blog](https://www.mashirl.com/)
 - [Yifans_Z](https://zyf.im/)
-- [Restent Blog](https://blog.restent.win)
+- [Restent's Notebook](https://blog.gxres.net)
