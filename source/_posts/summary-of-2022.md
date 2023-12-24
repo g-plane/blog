@@ -14,7 +14,7 @@ tags:
 
 本年的 GitHub 时间线：
 
-![GitHub Timeline](https://upload.cc/i1/2022/12/31/GY4HWf.png)
+![GitHub Timeline](../images/summary-of-2022/github-timeline.webp)
 
 - 借助 [browserslist-rs](https://github.com/browserslist/browserslist-rs)，我加入了 [Browserslist](https://github.com/browserslist) 组织。
 - 用 Rust 写了一个 CSS parser：[Raffia](https://github.com/g-plane/raffia)，支持 CSS/Sass/SCSS/Less。截至本文撰写时，基本完成对 CSS 的支持；支持 Sass/SCSS 大部分的语法；Less 的支持还较少。另外还用 Solid.js 制作了 Raffia 的 [playground](http://raffia-play.vercel.app/)。
@@ -26,7 +26,7 @@ tags:
 
 在今年的二月份，我组了一台真正属于自己的台式电脑。（大学那台用的是家里的钱，所以不算）为了能较快地编译 Rust 代码，CPU 用的是 i7-12700K，内存有 32GB。
 
-![meme](https://upload.cc/i1/2022/12/31/LY9Xq5.png)
+![meme](../images/summary-of-2022/meme.webp)
 
 另外购买了一个 12TB 的外置桌面硬盘。不过目前只存放了下载下来的动画。
 
