@@ -48,6 +48,8 @@ markdown:
   anchors:
     level: 2
     permalink: true
+  plugins:
+    - markdown-it-footnote
 highlight:
   enable: false
   line_number: false
