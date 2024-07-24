@@ -50,13 +50,8 @@ markdown:
     permalink: true
   plugins:
     - markdown-it-footnote
-highlight:
-  enable: false
-  line_number: false
-  wrap: false
-  hljs: true
+syntax_highlighter: prismjs
 prismjs:
-  enable: true
   preprocess: true
   line_number: false
 
