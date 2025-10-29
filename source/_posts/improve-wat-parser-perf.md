@@ -100,7 +100,7 @@ But, how to know which range to drain? Certainly the end of the range is the cur
 Inspired by `rowan::GreenNodeBuilder`, we use a `usize` to record the start index which is the length of the `Vec` when starting the node.
 
 This is stack-like naturally, though we don't need to create an explicit stack,
-and this is unlike how `rowan::GreenNodeBuilder` implements, which avoids another `Vec` and `unwrap` calls.
+but this is unlike how `rowan::GreenNodeBuilder` implements, which avoids another `Vec` and `unwrap` calls.
 
 There is nothing similar to `rowan::GreenNodeBuilder::start_node_at` in our implementation,
 instead we need to manually pass the start index to other functions, but this is cheap since it's just a `usize`.
