@@ -6,39 +6,8 @@ tags:
   - Rust
 ---
 
-The WAT (WebAssembly Text Format) parser in [wasm-language-tools](https://github.com/g-plane/wasm-language-tools) v0.5 or before was not fast enough. Recently I have rewritten the parser from scratch, and the performance has been increased by 350% in our benchmark.
-Let me share how we optimized it.
-
-We use the code snippet below in our benchmark:
-
-```wasm
-(module
-    (func $f1 (param $p1 i32) (param $p2 i32) (result i32)
-        (i32.add (local.get $p1) (local.get $p2))
-    )
-    (global $g1 f64 (f64.const 0))
-    (func $f2 (result f64)
-        (global.get $g1)
-    )
-    (type $t (func (result f64)))
-    (func $f3 (type $t)
-        (call $f2)
-    )
-    (func (export "f32.min_positive") (result i32) (i32.reinterpret_f32 (f32.const 0x1p-149)))
-    (func (export "f32.min_normal") (result i32) (i32.reinterpret_f32 (f32.const 0x1p-126)))
-
-    (rec (type $r (sub $t (struct (field (ref $r))))))
-    (global (;7;) (mut f32) (f32.const -13))
-    (rec
-        (type $t1 (sub (func (param i32 (ref $t3)))))
-        (type $t2 (sub $t1 (func (param i32 (ref $t2)))))
-    )
-    (global (;8;) (mut f64) (f64.const -14))
-
-    (func (export "f32.max_finite") (result i32) (i32.reinterpret_f32 (f32.const 0x1.fffffep+127)))
-    (func (export "f32.max_subnormal") (result i32) (i32.reinterpret_f32 (f32.const 0x1.fffffcp-127)))
-)
-```
+The WAT (WebAssembly Text Format) parser in [wasm-language-tools](https://github.com/g-plane/wasm-language-tools) v0.5 or before was not fast enough. Recently I have rewritten the parser from scratch, and the performance has been increased by 350% in the benchmark.
+Let me share how I optimized it.
 
 ## Use hand-written parser
 
@@ -48,7 +17,7 @@ so the first step is to write the parser by hands. Hand-written parser is not on
 
 ## Clone well-known green tokens and green nodes
 
-There're many parentheses and keywords in WAT. For these tokens and nodes, we shouldn't create them again and again when parsing.
+There're many parentheses and keywords in WAT. For these tokens and nodes, they shouldn't be created again and again when parsing.
 Looking into the implementation of `rowan::GreenToken` and `rowan::GreenNode`, there's a `Arc` inside,
 so we can prepare these well-known tokens and nodes in advance, then put them into `LazyLock` one by one, and clone them when needed.
 
@@ -84,7 +53,7 @@ struct Token<'s> {
 }
 ```
 
-For convenience, we added `impl From<Token<'_>> for rowan::NodeOrToken<rowan::GreenNode, rowan::GreenToken>`.
+For convenience, I added `impl From<Token<'_>> for rowan::NodeOrToken<rowan::GreenNode, rowan::GreenToken>`.
 
 ## Use a shared single `Vec` to avoid allocations
 
@@ -106,6 +75,37 @@ There is nothing similar to `rowan::GreenNodeBuilder::start_node_at` in our impl
 instead we need to manually pass the start index to other functions, but this is cheap since it's just a `usize`.
 
 ## Result
+
+The code snippet below is used in the benchmark:
+
+```wasm
+(module
+    (func $f1 (param $p1 i32) (param $p2 i32) (result i32)
+        (i32.add (local.get $p1) (local.get $p2))
+    )
+    (global $g1 f64 (f64.const 0))
+    (func $f2 (result f64)
+        (global.get $g1)
+    )
+    (type $t (func (result f64)))
+    (func $f3 (type $t)
+        (call $f2)
+    )
+    (func (export "f32.min_positive") (result i32) (i32.reinterpret_f32 (f32.const 0x1p-149)))
+    (func (export "f32.min_normal") (result i32) (i32.reinterpret_f32 (f32.const 0x1p-126)))
+
+    (rec (type $r (sub $t (struct (field (ref $r))))))
+    (global (;7;) (mut f32) (f32.const -13))
+    (rec
+        (type $t1 (sub (func (param i32 (ref $t3)))))
+        (type $t2 (sub $t1 (func (param i32 (ref $t2)))))
+    )
+    (global (;8;) (mut f64) (f64.const -14))
+
+    (func (export "f32.max_finite") (result i32) (i32.reinterpret_f32 (f32.const 0x1.fffffep+127)))
+    (func (export "f32.max_subnormal") (result i32) (i32.reinterpret_f32 (f32.const 0x1.fffffcp-127)))
+)
+```
 
 Here is the benchmark result after all optimizations:
 
