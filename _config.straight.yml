@@ -9,5 +9,5 @@ nav_links:
 favicon: images/favicon.webp
 
 disqus:
-  enable: true
+  enable: false
   short_name: gplane-blog
