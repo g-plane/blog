@@ -21,6 +21,21 @@ There're many parentheses and keywords in WAT. For these tokens and nodes, they 
 Looking into the implementation of `rowan::GreenToken` and `rowan::GreenNode`, there's a `Arc` inside,
 so we can prepare these well-known tokens and nodes in advance, then put them into `LazyLock` one by one, and clone them when needed.
 
+For example, for the `func` keyword we will have:
+
+```rust
+pub static KW_FUNC: LazyLock<NodeOrToken<GreenNode, GreenToken>> =
+    LazyLock::new(|| GreenToken::new(SyntaxKind::KEYWORD.into(), "func").into());
+```
+
+once we meet the `func` keyword in parser, we only need:
+
+```rust
+let keyword = KW_FUNC.clone();
+```
+
+instead of calling `GreenToken::new` again and again.
+
 ## Keyword matching
 
 There're many keywords in WAT such as `module`, `func`, `param`, `result`, etc.
@@ -64,6 +79,7 @@ At first, we may create a new `Vec` for each node.  However, this will create ma
 Instead, inspired by `rowan::GreenNodeBuilder`, we only create a single shared `Vec` in the parser.
 When parsing, we push children tokens and nodes into that `Vec`;
 when finishing a node, we use the `drain` method of `Vec` which can remove a range of children and return them as an iterator, and the iterator can be used to create a `rowan::GreenNode`.
+The `drain` method just removes items, but the capacity of the Vec doesn't changed. For the next time we push children tokens and nodes, if they don't exceed the capacity, there's no need to do allocation!
 
 But, how to know which range to drain? Certainly the end of the range is the current length of the `Vec`.
 Inspired by `rowan::GreenNodeBuilder`, we use a `usize` to record the start index which is the length of the `Vec` when starting the node.
