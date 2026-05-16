@@ -1,0 +1,4 @@
+minimumReleaseAge: 4320
+minimumReleaseAgeExclude:
+  - hexo-theme-straight
+blockExoticSubdeps: true
