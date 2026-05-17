@@ -25,7 +25,7 @@ rowan 的 [`SyntaxNode::siblings`](https://docs.rs/rowan/latest/rowan/api/struct
 
 ### 性能
 
-主要因素是性能。之前在优化 diagnostics 时，profiling 结果显示红树的遍历占了相当可观的比例。尽管当时有使用 `preorder` 的 `skip_subtree` 来减少部分子树的遍历，但收效甚微。一个可能的原因是 rowan 支持对语法树进行可变操作，虽然我不需要修改语法树，但 rowan 内部可能为此而特别设计，进而影响性能。
+主要因素是性能。之前在优化 diagnostics 时，profiling 结果显示红树的遍历占了相当可观的比例。尽管当时有使用 [`preorder`](https://docs.rs/rowan/latest/rowan/api/struct.SyntaxNode.html#method.preorder) 的 [`skip_subtree`](https://docs.rs/rowan/latest/rowan/api/struct.Preorder.html#method.skip_subtree) 来减少部分子树的遍历，但收效甚微。一个可能的原因是 rowan 支持对语法树进行可变操作，虽然我不需要修改语法树，但 rowan 内部可能为此而特别设计，进而影响性能。
 
 另一个原因是每次创建红树的 node 或 token 都要进行一次堆分配，当到了遍历整棵树的场景时，大量的节点将被创建和销毁，这将显著损害性能。其创建的次数可能远超你的想像：每一次的节点查询，包括但不限于子节点、兄弟节点都会为查询到的节点创建一个新的对象，并在离开作用域时销毁它。[cstree](https://github.com/domenicquirl/cstree) 宣称能比 rowan 快就是因为它会缓存创建过的 node 和 token，避免反复创建销毁。
 
