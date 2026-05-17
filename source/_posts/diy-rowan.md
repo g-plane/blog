@@ -127,3 +127,5 @@ rowan 使用的 ThinArc 来自他们 vendor 版本的 [`triomphe`](https://docs.
 | **diagnostics** | 36.233 | 21.049 | -15.184 | ↓ 41.9% | 1.72× |
 | **changed text** | 250.82 | 151.17 | -99.65 | ↓ 39.7% | 1.66× |
 | **parser** | 13.723 | 13.421 | -0.302 | ↓ 2.2% | 1.02× |
+
+相关 Pull Request：[#36 Rewrite rowan with our own implementation](https://github.com/g-plane/wasm-language-tools/pull/36)
