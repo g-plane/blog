@@ -2,7 +2,7 @@
 title: 我的小伙伴们
 ---
 
-欢迎和我交换友链！我对站点没什么要求，内容以原创为主即可。**（不接受非博客以及满眼转载的站点）**
+欢迎和我交换友链！我对站点没什么要求，内容以原创为主即可。
 
 ## 友情链接
 
@@ -17,3 +17,4 @@ title: 我的小伙伴们
 - [Mashirl’s Blog](https://www.mashirl.com/)
 - [Yifans_Z](https://zyf.im/)
 - [Restent's Notebook](https://blog.gxres.net)
+- [JrHimself](https://h-jr.me/)
