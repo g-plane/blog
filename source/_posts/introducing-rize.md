@@ -4,6 +4,7 @@ description: Rize is a puppeteer wrapper which provides convenient APIs.
 date: 2018-03-04 22:53:49
 tags:
   - JavaScript
+lang: en
 ---
 
 ## What is "Rize"?

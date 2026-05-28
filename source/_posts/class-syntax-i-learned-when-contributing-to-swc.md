@@ -4,6 +4,7 @@ description: The weired class syntax you don't know.
 date: 2021-12-03 16:52:18
 tags:
   - JavaScript
+lang: en
 ---
 
 ## Quiz

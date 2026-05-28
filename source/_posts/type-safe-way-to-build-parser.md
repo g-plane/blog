@@ -4,6 +4,7 @@ date: 2021-09-05 11:48:57
 description: Type-safe way for building a parser with the power of TypeScript type system.
 tags:
   - TypeScript
+lang: en
 ---
 
 > This post is for testing my hugely updated blog theme.

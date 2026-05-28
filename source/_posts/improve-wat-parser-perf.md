@@ -4,6 +4,7 @@ date: 2025-10-28 17:29:12
 tags:
   - WebAssembly
   - Rust
+lang: en
 ---
 
 The WAT (WebAssembly Text Format) parser in [wasm-language-tools](https://github.com/g-plane/wasm-language-tools) (full-featured language server for WebAssembly) v0.5 or before was not fast enough. Recently I have rewritten the parser from scratch, and the performance has been increased by 350% in the benchmark.
