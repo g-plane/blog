@@ -1,5 +1,5 @@
 ---
-title: Amber Tree: A Middle Ground Between Red and Green Trees
+title: "Amber Tree: A Middle Ground Between Red and Green Trees"
 date: 2026-06-04 22:53:23
 tags:
   - Rust
