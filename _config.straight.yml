@@ -1,6 +1,8 @@
 copyright_date: 2016-2026
 
 nav_links:
+  - text: GitHub
+    link: https://github.com/g-plane
   - text: About Me
     link: /about
   - text: Friends
